@@ -50,7 +50,7 @@ for i in range(3):
 # --- 6. enumerate() - the index and the value, together ---------------------
 # No counter to track by hand - enumerate() hands you both.
 
-for i, letter in enumerate("cat"):
+for i, letter in enumerate("cat"):  
     print(i, letter)           # 0 c / 1 a / 2 t
 
 for i, host in enumerate(["srv-01", "srv-02", "srv-03"], start=1):
