@@ -57,6 +57,8 @@ else:
     print("Invalid operator !!!")
     continue
 
+
+
 print(f"{n1} {operator} {n2} = {result}")
 
 choice = input("Type 'y' to continue, 'n' to start over, q to quit: ")
