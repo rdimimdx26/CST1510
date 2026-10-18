@@ -19,10 +19,9 @@ Delete these instructions as you replace them with your code.
 #    - the second is a NUMBER (use float(), not int())
 #    - the third  is a NUMBER (use float(), not int())
 
-label = ""      # replace with an input() call
-value = 0.0     # replace with an input() call, converted with float()
-limit = 0.0     # replace with an input() call, converted with float()
-
+label = input( " Enter a label:")
+value = float(input ("Enter a value:"))
+limit = float(input("Enter a limit:"))
 
 # ================================================================== PROCESS
 # 2. Work out the difference and the percentage.       [Typical and above]
@@ -64,3 +63,5 @@ print("=" * 34)
 #    [ ] Run it three times with different numbers
 #    [ ] Run it with a total of 0 and note the error (do not fix it yet)
 #    [ ] Check every variable name says what it holds
+
+# %%
