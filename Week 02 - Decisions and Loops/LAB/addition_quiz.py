@@ -17,6 +17,7 @@
 #         print ("Try again!")
 # '''
 
+# %%
 
 import random
 
@@ -24,22 +25,20 @@ num1 = random.randint(1, 9)
 num2 = random.randint(1, 9)
 
 while True:
-    
+    answer = int(input(f"What is {num1} + {num2}? "))
 
-#     answer = int(input(f"What is {num1} + {num2}?"))
+    if answer == num1 + num2:
+        print("Correct!")
+        break
+    else:
+        print("Try again!")
 
-#     if answer == num1 + num2:
-#         print("Correct!")
-#         break
-#     else:
-#         print("Try again!")
+# %%
+print(ord("a"))
+print(ord("b"))
+print(ord("A"))
 
-
-
-# print(ord("a"))
-# print(ord("b"))
-# print(ord("A"))
-
-# print(ord("А"))
-# print(ord("Б"))
-# print(ord("а"))
+print(ord("А"))
+print(ord("Б"))
+print(ord("а"))
+# %%
