@@ -3,7 +3,7 @@ RECORD CHECK  -  my version
 ===========================
 
 Name  :
-Lane  :  AI / Cyber / IT      (delete two)
+Lane  :  AI 
 Date  :
 
 Run it:   python template.py
@@ -19,32 +19,44 @@ Delete these instructions as you replace them with your code.
 #    - the second is a NUMBER (use float(), not int())
 #    - the third  is a NUMBER (use float(), not int())
 
-label = input( " Enter a label:")
-value = float(input ("Enter a value:"))
-limit = float(input("Enter a limit:"))
+# label = ""      # replace with an input() call
+# value = 0.0     # replace with an input() call, converted with float()
+# limit = 0.0     # replace with an input() call, converted with float()
+
+# %%
+
+label = input("Dataset name: ")
+value = float(input("Rows loaded: "))
+limit = float(input("Rows expected: "))
+
+print(label)
+print(value)
+print(limit)
 
 # ================================================================== PROCESS
 # 2. Work out the difference and the percentage.       [Typical and above]
-value = 32.5
-limit = 28
 
-difference = value - limit
-percent = (value/limit)*100
-
-if percent>=100:
-    status="Over limit"
-elif percent >=90:
-    status="Warning"
-else:
-    status= "Ok"   
-
-
+difference = 0.0   # replace with your calculation
+percent = 0.0       # replace with your calculation
 # 3. Decide a status and store it in a variable called status.
 #
 #    Threshold : if / else        -> "OVER LIMIT" or "OK"
 #    Typical   : if / elif / else -> "OVER LIMIT" (100% or more),
 #                                     "WARNING" (90% or more), otherwise "OK"
-  # replace with your if / else (or if / elif / else)
+
+#status = ""   # replace with your if / else (or if / elif / else)
+
+# %% 
+
+label = input("Dataset name: ")
+value = float(input("Rows loaded: "))
+limit = float(input("Rows expected: "))
+if value > limit:
+    status = "OVER LIMIT"
+else:
+    status = "OK"
+print (status)
+
 
 
 # =================================================================== OUTPUT
