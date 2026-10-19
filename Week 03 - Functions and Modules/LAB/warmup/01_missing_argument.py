@@ -38,4 +38,4 @@ def status_of(percent, warning_at):
 
 print(status_of(95, 97))
 #status_of is to decide the status of a percentage.
-It doesn't calculate a percentage. It compares an existing percentage against two thresholds.
+#It doesn't calculate a percentage. It compares an existing percentage against two thresholds.
