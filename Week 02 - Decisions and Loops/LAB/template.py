@@ -161,6 +161,13 @@ print("Total OVER LIMIT records:", over_limit_count)
 #    [ ] Run it with a total of 0 and note the error (do not fix it yet)
 #    [ ] Check every variable name says what it holds
 
-# %%
+#  Task 5 - Testing:
+# Test with zero:
+# Value = 1187
+# Limit = 0
+# Error: ZeroDivisionError: float division by zero
+# Reason: Python cannot divide by zero.
+# Error observed but not fixed, as instructed
+
 
 
