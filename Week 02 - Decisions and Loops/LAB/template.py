@@ -18,20 +18,25 @@ Delete these instructions as you replace them with your code.
 #    - the first is TEXT      (a name, a hostname, an IP)  -> no conversion needed
 #    - the second is a NUMBER (use float(), not int())
 #    - the third  is a NUMBER (use float(), not int())
-
+# %%
 label = input( " Enter a label:")
 value = float(input ("Enter a value:"))
 limit = float(input("Enter a limit:"))
-
+print("Label:", label)
+print("Value:", value)
+print("Limit:", limit)
 # ================================================================== PROCESS
 # 2. Work out the difference and the percentage.       [Typical and above]
+# %%
+
 value = 1187
 limit = 1200
 
 difference = value - limit
 percent = (value/limit)*100
 
-
+print("Difference:", difference)
+print("Percentage:", percent)
 
 # 3. Decide a status and store it in a variable called status.
 
@@ -39,14 +44,12 @@ percent = (value/limit)*100
 # Treshold
 value = 1187
 limit = 1200
-percent = (value / limit) * 100
-print(percent)
 
 if percent>=100:
     status = "OVER LIMIT"
 else:
     status ="OK"  
-print(status)
+print("Status:", status)
 # %%
 # Typical
 value = 1187
@@ -58,10 +61,7 @@ elif percent >= 90:
     status = "WARNING"
 else:
     status = "OK"
-print(status)    
-
-
-
+print("Status:", status)
 # =================================================================== OUTPUT
 # 4. Print the report.
 #
@@ -72,14 +72,33 @@ print(status)
 #                Keep count of how many came back OVER LIMIT and print that
 #                once, after the loop ends.
 # %%
+# Threshold
+label = "Rumy's project"
+value = 1187
+limit = 1200
+if value > limit:
+    status = "OVER LIMIT"
+else:
+    status = "WITHIN LIMIT"
 print()
 print("=" * 34)
-print(f"  RECORD CHECK  -  {label}")
+print(f" RECORD CHECK  -  {label}")
 print("=" * 34)
 
-# 
+print("Project:", label)
+print("Value:", value)
+print("Limit:", limit)
+print("Status:", status)
 
 print("=" * 34)
+
+#Typical
+label = "Rumy's project"
+value = 1187
+limit = 1200
+
+difference = value - limit
+percent = (value/limit)*100
 
 
 # ==========================================================================
@@ -90,3 +109,74 @@ print("=" * 34)
 #    [ ] Check every variable name says what it holds
 
 # %%
+label = "Rumy's project"
+value = 1300
+limit = 1200
+if value > limit:
+    status = "OVER LIMIT"
+else:
+    status = "WITHIN LIMIT"
+print()
+print("=" * 34)
+print(f" RECORD CHECK  -  {label}")
+print("=" * 34)
+
+print("Project:", label)
+print("Value:", value)
+print("Limit:", limit)
+print("Status:", status)
+
+print("=" * 34)
+# %%
+label = "Rumy's project"
+value = 1200
+limit = 1200
+if value > limit:
+    status = "OVER LIMIT"
+else:
+    status = "WITHIN LIMIT"
+print()
+print("=" * 34)
+print(f"RECORD CHECK  -  {label}")
+print("=" * 34)
+
+print("Project:", label)
+print("Value:", value)
+print("Limit:", limit)
+print("Status:", status)
+
+print("=" * 34)
+# %%
+# Step 2: Calculate difference and percentage
+label = "Rumy's project"
+value = 1200
+limit = 1200
+difference = value - limit
+percent = (value / limit) * 100
+if value > limit:
+    status = "OVER LIMIT"
+else:
+    status = "WITHIN LIMIT"
+print()
+print("=" * 34)
+print(f"RECORD CHECK  -  {label}")
+print("=" * 34)
+
+print("Project:", label)
+print("Value:", value)
+print("Limit:", limit)
+print("Status:", status)
+
+print("=" * 34)
+# %%
+value = 1200
+limit = 1200
+
+difference = value - limit
+percent = (value / limit) * 100
+print("Project:", label)
+print("Value:", value)
+print("Limit:", limit)
+print("Status:", status)
+print(f"Difference: {difference:>10.2f}")
+print(f"Percentage: {percent:>10.2f}%")
