@@ -3,7 +3,7 @@ RECORD CHECK  -  my version
 ===========================
 
 Name  :
-Lane  :  AI / Cyber / IT      (delete two)
+Lane  :  AI
 Date  :
 
 Run it:   python template.py
@@ -27,6 +27,10 @@ Delete these instructions as you replace them with your code.
 #    Give each function a one-line docstring saying what it does.
 
 # your function(s) go here
+# %% 
+def status_of(percent):
+    if percent >= 100:
+        return "OVER LIMIT
 
 
 # ==================================================================== INPUT
