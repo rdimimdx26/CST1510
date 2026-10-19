@@ -76,7 +76,7 @@ print("Status:", status)
 label = "Rumy's project"
 value = 1187
 limit = 1200
-if value > limit:
+if value >= limit:
     status = "OVER LIMIT"
 else:
     status = "WITHIN LIMIT"
@@ -91,14 +91,33 @@ print("Limit:", limit)
 print("Status:", status)
 
 print("=" * 34)
-
-#Typical
+# %%
+#Typical and I have added elif 
 label = "Rumy's project"
 value = 1187
 limit = 1200
 
 difference = value - limit
 percent = (value/limit)*100
+
+if percent >= 100:
+    status = "OVER LIMIT"
+elif percent >= 90:
+    status = "WARNING"
+else:
+    status = "OK"
+print()
+print("=" * 34)
+print(f"RECORD CHECK  -  {label}")
+print("=" * 34)
+print(f"Difference: {difference:>10.2f}")
+print(f"Percentage: {percent:>10.2f}%")  
+print("Project:", label)
+print("Value:", value)
+print("Limit:", limit)
+print("Status:", status)
+
+print("=" * 34)
 
 
 # ==========================================================================
@@ -118,7 +137,7 @@ else:
     status = "WITHIN LIMIT"
 print()
 print("=" * 34)
-print(f" RECORD CHECK  -  {label}")
+print(f"RECORD CHECK  -  {label}")
 print("=" * 34)
 
 print("Project:", label)
@@ -131,7 +150,7 @@ print("=" * 34)
 label = "Rumy's project"
 value = 1200
 limit = 1200
-if value > limit:
+if value >= limit:
     status = "OVER LIMIT"
 else:
     status = "WITHIN LIMIT"
@@ -153,7 +172,7 @@ value = 1200
 limit = 1200
 difference = value - limit
 percent = (value / limit) * 100
-if value > limit:
+if value >= limit:
     status = "OVER LIMIT"
 else:
     status = "WITHIN LIMIT"
@@ -169,14 +188,3 @@ print("Status:", status)
 
 print("=" * 34)
 # %%
-value = 1200
-limit = 1200
-
-difference = value - limit
-percent = (value / limit) * 100
-print("Project:", label)
-print("Value:", value)
-print("Limit:", limit)
-print("Status:", status)
-print(f"Difference: {difference:>10.2f}")
-print(f"Percentage: {percent:>10.2f}%")
