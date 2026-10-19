@@ -118,6 +118,43 @@ print("Limit:", limit)
 print("Status:", status)
 
 print("=" * 34)
+# %%
+# Excellent
+over_limit_count = 0
+while True:
+    label = input("Enter a label (or quit): ")
+    if label.lower()== "quit":
+     break
+    value = float(input("Enter a value:"))
+    limit = float(input("Enter a limit:"))
+    difference = value - limit
+    percent = (value/limit)* 100
+if percent >= 100:
+        status = "OVER LIMIT"
+        over_limit_count += 1
+elif percent >= 90:
+    status = "WARNING"
+else:
+    status = "OK"
+    
+
+
+
+
+    print("=" * 34)
+    print(f"RECORD CHECK - {label}")
+    print("=" * 34)
+
+    print("Project:", label)
+    print("Value:", value)
+    print("Limit:", limit)
+    print("Status:", status)
+    print(f"Difference: {difference:>10.2f}")
+    print(f"Percentage: {percent:>10.2f}%")
+
+    print("=" * 34)
+
+print("Total OVER LIMIT records:", over_limit_count)
 
 
 # ==========================================================================
