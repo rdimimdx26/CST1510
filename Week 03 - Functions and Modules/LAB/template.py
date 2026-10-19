@@ -28,9 +28,22 @@ Delete these instructions as you replace them with your code.
 
 # your function(s) go here
 # %% 
+#Threshold:
 def status_of(percent):
     if percent >= 100:
-        return "OVER LIMIT
+        return "OVER LIMIT"
+    elif percent >= 90:
+        return "WARNING"
+    else:
+        return "OK"
+print(status_of(100))
+print(status_of(90))
+print(status_of(75))
+
+
+# %%
+# Typical and above:
+def status_of(percent):
 
 
 # ==================================================================== INPUT
@@ -67,7 +80,7 @@ status = ""          # replace with your code
 #                as you like in one run - type "quit" as the label to stop.
 #                Keep count of how many came back OVER LIMIT and print that
 #                once, after the loop ends.
-
+# %%
 print()
 print("=" * 34)
 print(f"  RECORD CHECK  -  {label}")
@@ -85,3 +98,5 @@ print("=" * 34)
 #    [ ] Run it with a total of 0 and note the error (do not fix it yet)
 #    [ ] Check every function does one job - if a function both calculates
 #        and prints, split it
+
+# %%
