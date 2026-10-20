@@ -56,8 +56,21 @@ print(result)
 # Excellent: 
 def print_report(label, value, limit, difference, percent, status):
      """Print a formatted report of the record."""
-
-
+     print("=" * 34)
+     print(f"RECORD CHECK - {label}")
+     print("=" * 34)
+     print("Value:", value)
+     print("Limit:", limit)
+     print(f"Difference: {difference:>10.2f}")
+     print(f"Percentage: {percent:>10.2f}%")
+     print("Status:", status)
+     print("=" * 34)
+label = input("Enter a label: ")
+value = float(input("Enter a value: "))
+limit = float(input("Enter a limit: "))
+difference, percent = check(value, limit)
+status = status_of(percent)
+print_report(label, value, limit, difference, percent, status)
 # ==================================================================== INPUT
 # 2. Ask for your three values.
 #
