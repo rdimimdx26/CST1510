@@ -30,6 +30,7 @@ Delete these instructions as you replace them with your code.
 # %% 
 #Threshold:
 def status_of(percent):
+    """Return the status based on the percentage."""
     if percent >= 100:
         return "OVER LIMIT"
     elif percent >= 90:
@@ -44,11 +45,18 @@ print(status_of(75))
 # %%
 # Typical and above:
 def check(value, limit):
+    """Calculate and return the difference and percentage."""
     difference = value - limit
     percent = (value / limit) * 100
     return difference, percent
 result = check(1187, 1200)
 print(result)
+
+# %%
+# Excellent: 
+def print_report(label, value, limit, difference, percent, status):
+     """Print a formatted report of the record."""
+
 
 # ==================================================================== INPUT
 # 2. Ask for your three values.
