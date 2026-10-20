@@ -43,8 +43,12 @@ print(status_of(75))
 
 # %%
 # Typical and above:
-def status_of(percent):
-
+def check(value, limit):
+    difference = value - limit
+    percent = (value / limit) * 100
+    return difference, percent
+result = check(1187, 1200)
+print(result)
 
 # ==================================================================== INPUT
 # 2. Ask for your three values.
