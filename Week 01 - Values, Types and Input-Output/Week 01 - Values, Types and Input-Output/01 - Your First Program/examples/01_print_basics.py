@@ -78,3 +78,34 @@ print("Backup complete - 4 of 4 servers")             # IT
 # 3. Add the line  print("Value: " + 23.7)  - read the error, then fix it.
 
 # %%
+# 1. Print your name and age using commas, then again using an f-string.
+name = "Rumy"
+age = "young"
+print(f"My name is {name} and I am {age}.")
+# %%
+name = "Rumy"
+age = "young"
+print( "My name is", name, " and I am ", age, ".")
+# %%
+name = "Rumy"
+age = "young"
+print(f"My name is {name} and I am {age}.", sep="_", end="") # sep="_" does nothing here. sep only goes between separate items, and an f-string is a single item.
+      
+
+# %%
+# 2. Print today's date as 14/09/2026 using sep="/".
+date = "14/09/2026"
+print(" The day of the first exersise", date,".")
+
+
+# %%
+# 3. Add the line  print("Value: " + 23.7)  - read the error, then fix it.
+print("Value: " + 23.7) # TypeError: can only concatenate str (not "float") to str
+# %% 
+value = 23.7
+print(f"value: str.{23.7}.") # prints the text exactly as we typed it.
+
+# %%
+value = 23.7
+print(f"value:{23.7}")
+# %%
