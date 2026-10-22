@@ -92,6 +92,6 @@ print (result)
 
 # %%
 #3. Predict, then check: what does print(greet()) show, given greet() from
-#    section 1? # It will print Record check starting and then None.
+#    section 1? # It will print Record check starting and then None, because a function without return gives None.
 print(greet())
 # %%
