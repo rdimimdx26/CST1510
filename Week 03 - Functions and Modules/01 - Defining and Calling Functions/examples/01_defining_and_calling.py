@@ -83,3 +83,15 @@ divider()
 divider()
 
 # %%
+#Write a function double(n) that RETURNS n * 2, not prints it. Store the
+#    result of double(21) in a variable and print that.
+def double(n):
+    return n * 2
+result = double(21)
+print (result)
+
+# %%
+#3. Predict, then check: what does print(greet()) show, given greet() from
+#    section 1? # It will print Record check starting and then None.
+print(greet())
+# %%
