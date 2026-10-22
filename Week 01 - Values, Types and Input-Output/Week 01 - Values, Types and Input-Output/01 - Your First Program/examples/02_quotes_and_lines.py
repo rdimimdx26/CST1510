@@ -98,3 +98,10 @@ print("=" * 50)
 # %%
 print("*" *50)
 # %%
+# 3. Predict what "7" * 3 and 7 * 3 print. Then check.
+# "7" *3 it will print 777 and 7 * 3 it will print the multiplication 21
+# %%
+print("7" * 3)
+# %%
+print(7 * 3)
+# %%
