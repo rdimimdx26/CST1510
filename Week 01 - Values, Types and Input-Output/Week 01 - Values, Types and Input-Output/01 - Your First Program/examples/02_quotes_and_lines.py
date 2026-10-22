@@ -20,7 +20,7 @@ print("the log said 'connection refused'")
 print("it's over the limit")               # apostrophe inside double quotes
 
 # %%
-print('it's over the limit') # test 
+print("it's over the limit") # test 
                              # SyntaxError: unterminated string literal (detected at line 2)
 
 # WATCH OUT: 'it's over' is a SyntaxError - the apostrophe ends the string
