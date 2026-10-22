@@ -89,3 +89,12 @@ alert = "disk full"
 server = "srv-01"
 print(f"The alert said \"{alert}\" on server '{server}'")
 # %%
+# 2. Print a line of 50 dashes without typing 50 dashes.
+# %%
+print("-" *50)
+# %%
+print("=" * 50)
+
+# %%
+print("*" *50)
+# %%
