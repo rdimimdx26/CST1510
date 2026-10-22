@@ -57,10 +57,10 @@ print(result)
 # %%
 def clean(row):                                    # AI / Data Science
     return row.strip().lower()
-
+# %%
 def is_suspicious(ip):                              # Cyber Security
     return ip.startswith("10.0.0.")
-
+# %%
 def ping(host):                                     # IT
     return f"{host} is up"
 # %%
