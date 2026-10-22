@@ -44,7 +44,13 @@ def show(price):
 
 result = show(100)
 print(result)              # ...but there was no return, so result is None
+# %%
+def show(price):
+    return price           # print should become return
+result = 100 * 2            
 
+result = show(200)
+print(result)   
 
 # --- 5. Same idea, three fields ---------------------------------------------
 # One job, written once, reused for every row / line / server.
