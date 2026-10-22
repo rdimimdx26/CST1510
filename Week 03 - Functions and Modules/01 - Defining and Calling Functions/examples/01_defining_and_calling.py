@@ -83,7 +83,7 @@ divider()
 divider()
 
 # %%
-#Write a function double(n) that RETURNS n * 2, not prints it. Store the
+#2.Write a function double(n) that RETURNS n * 2, not prints it. Store the
 #    result of double(21) in a variable and print that.
 def double(n):
     return n * 2
