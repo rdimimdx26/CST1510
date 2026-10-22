@@ -84,3 +84,8 @@ print("=" * 30)
 # 3. Predict what "7" * 3 and 7 * 3 print. Then check.
 
 # %%
+# 1. Print:  The alert said "disk full" on server 'srv-01'
+alert = "disk full"
+server = "srv-01"
+print(f"The alert said \"{alert}\" on server '{server}'")
+# %%
