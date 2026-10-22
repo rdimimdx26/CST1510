@@ -103,7 +103,7 @@ print(" The day of the first exersise", date,".")
 print("Value: " + 23.7) # TypeError: can only concatenate str (not "float") to str
 # %% 
 value = 23.7
-print(f"value: str.{23.7}.") # prints the text exactly as we typed it.
+print(f"value: str.{23.7}.") # prints the text exactly as we typed.
 
 # %%
 value = 23.7
