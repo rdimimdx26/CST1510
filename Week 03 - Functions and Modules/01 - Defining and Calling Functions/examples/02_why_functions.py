@@ -70,12 +70,12 @@ print(status_of(95))                    # status_of doesn't care where 95 came f
 # 2. Write a function is_valid_percent(p) that returns True if p is between
 #    0 and 100 inclusive. Use it to check percent_of(87, 100).
 # %%
-def is_valid_percent(value,limit):
+def is_valid_percent(value,limit): #Remember: names go in the brackets when you define a function with def
     return (value/limit)*100
 
 def is_valid_percent(p):
     return 0<=p<=100
-result=percent_of(87,100)
+result=percent_of(87,100) # and real values go in when you call it.
 print(result, is_valid_percent(result))
     
 
