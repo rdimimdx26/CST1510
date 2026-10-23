@@ -52,8 +52,8 @@ def status_of(percent):
     else:
         return "OK"
 
+
 # Now they can be combined, or used completely separately:
-# %%
 print(status_of(percent_of(87, 100)))
 print(status_of(95))                    # status_of doesn't care where 95 came from
 
@@ -62,3 +62,22 @@ print(status_of(95))                    # status_of doesn't care where 95 came f
 # 1. Name one reason percent_of and status_of are two functions and not one.
 # 2. Write a function is_valid_percent(p) that returns True if p is between
 #    0 and 100 inclusive. Use it to check percent_of(87, 100).
+
+# %%
+# 1. Name one reason percent_of and status_of are two functions and not one.
+# percent_of calculates a number and status_of decides a label. Both can be used and fixed or changed separetly, without affecting the other.
+
+# 2. Write a function is_valid_percent(p) that returns True if p is between
+#    0 and 100 inclusive. Use it to check percent_of(87, 100).
+# %%
+def is_valid_percent(value,limit):
+    return (value/limit)*100
+
+def is_valid_percent(p):
+    return 0<=p<=100
+result=percent_of(87,100)
+print(result, is_valid_percent(result))
+    
+
+
+# %%
