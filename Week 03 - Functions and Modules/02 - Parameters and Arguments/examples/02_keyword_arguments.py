@@ -58,8 +58,12 @@ status_of(age="2.5", breed="Mini Chihuahua")
 def connect(host, port=443, timeout=30):
     print(host, port, timeout)
 connect("youtube.com", 443, 30)    
-connect("host=youtube.com", "port=443", "timeout=30")
-connect("youtube.com", "port=443", "timeout=30")
-
-
+connect(host="youtube.com", port=443, timeout=30)
+connect("youtube.com", port=443, timeout=30)
+# %%
+def connect(host, port=443, timeout=30):
+    print(host, port, timeout)
+connect("youtube.com", 443, 30)    
+connect(host="youtube.com", port=443, timeout=30)
+connect("youtube.com", timeout=30) # same result, as Python used its default, 443.mean: if the caller doesn’t give a value for this parameter, use this one automatically.
 # %%

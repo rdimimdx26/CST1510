@@ -6,7 +6,7 @@ Run:  python 01_local_variables.py
 """
 
 # --- 1. Local means local -----------------------------------------------
-
+# %%
 def check():
     result = "OK"
     print(result)     # fine - result exists here
@@ -18,7 +18,7 @@ check()
 
 
 # --- 2. Parameters are local too ------------------------------------------
-
+# %%
 def double(n):
     n = n * 2
     return n
@@ -29,7 +29,7 @@ print(number)            # still 21 - the n inside double is its own copy
 
 
 # --- 3. Each call gets its own fresh locals --------------------------------
-
+# %%
 def add_one(n):
     n = n + 1
     return n
@@ -41,7 +41,7 @@ print(add_one(5))    # 6 again - nothing carried over from the last call
 # --- 4. Reading an outer variable is fine ------------------------------
 # A function CAN read a variable defined outside it, as long as it is not
 # also a parameter or created inside the function.
-
+# %% 
 WARNING_AT = 90
 
 def status_of(percent):
@@ -54,7 +54,7 @@ print(status_of(92))
 
 # --- 5. Same idea, three fields ---------------------------------------------
 # The wall protects the caller's original value from the function's own work.
-
+# %%
 def clean_reading(reading):                          # AI / Data Science
     reading = reading.strip().lower()      # only changes the LOCAL copy
     return reading
@@ -62,7 +62,7 @@ def clean_reading(reading):                          # AI / Data Science
 raw_reading = " Missing "
 print(clean_reading(raw_reading))
 print(raw_reading)                          # unchanged - the original dataset is safe
-
+# %%
 def scan_result(status):                              # Cyber Security
     status = "flagged: " + status
     return status
@@ -70,7 +70,7 @@ def scan_result(status):                              # Cyber Security
 live_status = "clean"
 print(scan_result(live_status))
 print(live_status)                          # unchanged - the system being checked is untouched
-
+# %%
 def checked_disk(percent):                            # IT
     percent = min(percent, 100)
     return percent
