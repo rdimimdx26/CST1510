@@ -54,5 +54,12 @@ status_of(age="2.5", breed="Mini Chihuahua")
 
 # 2. Write connect(host, port=443, timeout=30) and call it three ways:
 #    all positional, all keyword, and mixed.
+# %%
+def connect(host, port=443, timeout=30):
+    print(host, port, timeout)
+connect("youtube.com", 443, 30)    
+connect("host=youtube.com", "port=443", "timeout=30")
+connect("youtube.com", "port=443", "timeout=30")
+
 
 # %%
