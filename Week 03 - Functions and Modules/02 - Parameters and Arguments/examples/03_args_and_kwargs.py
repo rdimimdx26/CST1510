@@ -55,7 +55,16 @@ connect("10.0.0.1", "10.0.0.2", "10.0.0.3", timeout=5, retries=3)
 # --- TRY IT ------------------------------------------------------------------
 # 1. Write average(*values) that returns the mean of however many numbers it
 #    gets. Call it with 3 numbers, then with 6.
+# %%
+def average(*values):
+    return sum(values)/len(values)
+print(average(2,7,9))
+print(average(20,30,40,50,60,70))
+
+      
 # 2. Write log_event(event, **details) that prints the event name, then one
 #    line per extra detail passed in as a keyword argument.
 # 3. Call connect() from section 4 with a host and three keyword options of
 #    your own choosing - predict the output before running it.
+
+# %%
