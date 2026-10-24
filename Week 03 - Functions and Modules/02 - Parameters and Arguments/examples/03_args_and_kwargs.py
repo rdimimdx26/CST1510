@@ -5,7 +5,7 @@ Accepting an unknown number of arguments.   Run:  python 03_args_and_kwargs.py
 """
 
 # --- 1. *args - collects extra positional arguments into a tuple -----------
-
+# %%
 def total(*numbers):
     return sum(numbers)
 
@@ -15,7 +15,7 @@ print(total())                 # 0 - works with none at all
 
 
 # --- 2. *args really is just a tuple - loop it, index it -------------------
-
+# %%
 def describe(*items):
     print(f"{len(items)} item(s): {items}")
     for item in items:
@@ -25,7 +25,7 @@ describe("router", "switch", "firewall")
 
 
 # --- 3. **kwargs - collects extra keyword arguments into a dict ------------
-
+# %%
 def configure(**settings):
     for key, value in settings.items():
         print(f"{key} = {value}")
@@ -35,7 +35,7 @@ configure(host="10.0.0.1", port=8080, ssl=True)
 
 # --- 4. Mixing named parameters with *args and **kwargs ---------------------
 # Order matters: normal params, then *args, then **kwargs.
-
+# %%
 def connect(host, *extra_hosts, **options):
     print("primary host:", host)
     if extra_hosts:

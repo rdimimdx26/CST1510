@@ -6,7 +6,7 @@ Run:  python 01_multiple_and_default.py
 """
 
 # --- 1. Multiple parameters, matched by position -----------------------------
-
+# %%
 def within_limit(value, limit):
     return value <= limit
 
@@ -16,7 +16,7 @@ print(within_limit(100, 87))    # swapped - a completely different answer
 
 # --- 2. A default value is a fallback -----------------------------------------
 # Give a parameter = something in the def line, and callers can leave it out.
-
+# %%
 def status_of(percent, warning_at=90):
     if percent >= 100:
         return "OVER LIMIT"
@@ -38,7 +38,7 @@ print(status_of(95, 96))          # warning_at given - overrides the default
 
 # --- 4. Same idea, three fields ---------------------------------------------
 # A default is a sensible fallback the caller can still override.
-
+# %%
 def load(path, header=True):                                # AI / Data Science
     return f"loading {path} (header={header})"
 
