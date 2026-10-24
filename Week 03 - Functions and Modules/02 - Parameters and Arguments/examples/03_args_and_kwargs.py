@@ -64,6 +64,13 @@ print(average(20,30,40,50,60,70))
       
 # 2. Write log_event(event, **details) that prints the event name, then one
 #    line per extra detail passed in as a keyword argument.
+# %% 
+def log_event(event, **details):
+    print("Event:", event)
+    for key, value in details.items():    # With .items() we get each (key, value) pair, which we unpack into two variables:
+     print(f"{key}:{value}")           # for key, value in details.items():
+log_event("login", user = "Rumyana")  # Without.items()Looping over a dictionary directly gives only the keys
+ 
 # 3. Call connect() from section 4 with a host and three keyword options of
 #    your own choosing - predict the output before running it.
 
