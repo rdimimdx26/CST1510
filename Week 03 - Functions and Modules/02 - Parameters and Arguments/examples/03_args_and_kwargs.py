@@ -96,13 +96,13 @@ def add_users(main_user, *extra_users, **options ):
      
 add_users("Rumyana", Anna="new user", Alex="student", assessment= "score", course="CST1510")        
 # %%
-def main_dish("dish", *sides, **extras):
+def main_dish(dish, *sides, **extras):
     print("main dish", dish)
     if sides:
         print("sides:", sides)
-        for key, value in extras.items():
-            print(f " {key} = {value}")
-main_dish("beef Bourguignon", "pasta", "omlet", size = "to share", spicy=False)# It will print main dish: beef Bourgunion, extras: pasta, extras: omlet, extra size to share, extras spicy.  
+    for key, value in extras.items():
+            print(f" {key} = {value}")
+main_dish("beef Bourguignon", "pasta", "omlet", size="to share", spicy=False)# It will print main dish: beef Bourgunion, extras: pasta, extras: omlet, extra size to share, extras spicy.  
        
 
 
