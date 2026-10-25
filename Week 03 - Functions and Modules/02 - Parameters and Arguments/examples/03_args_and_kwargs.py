@@ -83,8 +83,6 @@ def connect(main_host, *extra_hosts, **options ):
 
 connect("abv.bg") 
 connect("abv.bg", "outlook", "mail.co.uk", timeout=10, secure=True)      
-              
-
 
 # %%
 def add_users(main_user, *extra_users, **options ):
