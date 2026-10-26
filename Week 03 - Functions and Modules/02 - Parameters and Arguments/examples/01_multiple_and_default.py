@@ -67,3 +67,17 @@ print(report_line("Score:", 85, 15 )
 
 
 # 2. Predict, then check: status_of(89) and status_of(89, 85)
+# %%
+def status_of(percent, warning_at=90):
+    if percent >= 100:
+        return "OVER LIMIT"
+    elif percent >= warning_at:
+        return "WARNING"
+    else:
+        return "OK"
+print(status_of(89)) # 89, gives different results because the second call overrides the default threshold.
+print(status_of(85)) # The function never compares 85 to 100 or to 90. It always compares percent (which is 89) to the thresholds.       
+# expected outcome is: OK
+# expected outcome is: WARNING
+
+
