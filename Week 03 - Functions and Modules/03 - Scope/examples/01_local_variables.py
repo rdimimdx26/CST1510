@@ -82,6 +82,31 @@ print(server_disk)                          # unchanged - the server's own value
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Uncomment the print(result) line in section 1, run it, read the error.
+# %%
+def check():
+    result = "OK"
+    
+check()
+print(result)
+# NameError: name 'result' is not defined
+    
 # 2. Predict, then check: after double(number), is number 42 or still 21?
+# %%
+def double(n):
+    return n*2
+number=21
+print(double(number))
+print (number)
+# double returns a new value, 42, but it doesn’t change number itself. Since the returned 42 isn’t stored anywhere.
+# %%
+def double(n):
+    return n*2
+number=21
+number=double(number)
+print(number)
+
+
 # 3. Write a function that reads a variable defined above it in the file,
 #    without passing it in as a parameter.
+
+# %%
