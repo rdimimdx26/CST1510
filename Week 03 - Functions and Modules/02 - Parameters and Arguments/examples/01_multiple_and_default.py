@@ -76,8 +76,21 @@ def status_of(percent, warning_at=90):
     else:
         return "OK"
 print(status_of(89)) # 89, gives different results because the second call overrides the default threshold.
-print(status_of(85)) # The function never compares 85 to 100 or to 90. It always compares percent (which is 89) to the thresholds.       
+print(status_of(89, 85)) # The function never compares 85 to 100 or to 90. It always compares percent (which is 89) to the thresholds.       
+# In both calls, 89 is always the value being checked. What changes is the threshold it’s compared against.
+
 # expected outcome is: OK
 # expected outcome is: WARNING
 
-
+# %%
+def status_of(percent, warning_at=90):
+    if percent >= 100:
+        return "OVER LIMIT"
+    elif percent >= warning_at:
+        return "WARNING"
+    else:
+        return "OK"
+print(status_of(89))
+print(status_of(85))
+# Output changes to OK twice, as the default is used
+# %%
