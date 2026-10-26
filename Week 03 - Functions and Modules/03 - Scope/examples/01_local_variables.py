@@ -108,5 +108,14 @@ print(number)
 
 # 3. Write a function that reads a variable defined above it in the file,
 #    without passing it in as a parameter.
-
+# %%
+name="Rumyana"
+def show ():
+    print("Hello", name + ("!!!"))
+show()# or
+# %%
+name="Rumyana"
+def show():
+    return f" Hello {name}!!!"
+print(show())
 # %%
