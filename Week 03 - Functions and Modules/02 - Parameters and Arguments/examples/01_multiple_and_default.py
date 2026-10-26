@@ -57,4 +57,13 @@ print(backup("srv-01", destination="/mnt/backups"))
 # 1. Write report_line(label, value, width=10) that returns label followed by
 #    value right-aligned in width characters. Call it once using the default
 #    width and once overriding it.
+# %%
+def report_line(label, value, width=10):
+    return (label=(label),value=(value).1f)
+
+print(report_line("Score:", 85))
+print(report_line("Score:", 85, 15 )
+
+
+
 # 2. Predict, then check: status_of(89) and status_of(89, 85)
