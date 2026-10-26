@@ -61,6 +61,6 @@ print(total_checked)
 
 # 2. In section 1, the change to price is silently lost - there is no error.
 #    Explain why that is more dangerous than an error would be.
-# Because nothing looks broken. Variable is unchanged outside the function. There is no error and the wrong value could be used in further calculations.
+# Because nothing looks broken and it might gets unnoticed. Variable is unchanged outside the function. There is no error and the wrong value could be used in further calculations.
 
 # %%
