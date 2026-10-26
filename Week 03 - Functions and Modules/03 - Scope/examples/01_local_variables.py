@@ -15,6 +15,12 @@ check()
 
 # print(result)        # NameError: name 'result' is not defined
                         # result never existed outside check()
+# %%
+def check():
+    result = "OK"
+    return result
+
+print(check())                        
 
 
 # --- 2. Parameters are local too ------------------------------------------
@@ -58,7 +64,7 @@ print(status_of(92))
 def clean_reading(reading):                          # AI / Data Science
     reading = reading.strip().lower()      # only changes the LOCAL copy
     return reading
-
+# %%
 raw_reading = " Missing "
 print(clean_reading(raw_reading))
 print(raw_reading)                          # unchanged - the original dataset is safe
@@ -88,7 +94,7 @@ def check():
     
 check()
 print(result)
-# NameError: name 'result' is not defined
+# NameError: name 'result' is not defined, because result is within the function.
     
 # 2. Predict, then check: after double(number), is number 42 or still 21?
 # %%
@@ -104,7 +110,6 @@ def double(n):
 number=21
 number=double(number)
 print(number)
-
 
 # 3. Write a function that reads a variable defined above it in the file,
 #    without passing it in as a parameter.
