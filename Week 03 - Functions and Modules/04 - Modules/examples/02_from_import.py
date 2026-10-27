@@ -7,14 +7,14 @@ Run:  python 02_from_import.py
 
 # --- 1. from module import name ----------------------------------------------
 # No dot needed afterwards - it behaves like a function you wrote yourself.
-
+# %%
 from math import sqrt
 
 print(sqrt(16))     # 4.0 - not math.sqrt(16)
 
 
 # --- 2. You can bring in more than one -------------------------------------
-
+# %%
 from math import sqrt, ceil, floor
 
 print(ceil(4.2))
@@ -37,6 +37,12 @@ print(floor(4.8))
 
 floor = 3     # your own variable...
 # from math import floor   # ...would silently replace it
+# %%
+floor = 3
+from math import floor
+print(floor)
+print(floor (4))
+
 
 
 # --- TRY IT ------------------------------------------------------------------
@@ -44,3 +50,5 @@ floor = 3     # your own variable...
 #    of "import math".
 # 2. Explain, in one sentence, when you would choose "import module" over
 #    "from module import name".
+
+# %%
