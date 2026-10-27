@@ -74,5 +74,21 @@ print(hostname, disk_used)
 
 # --- TRY IT ----------------------------------------------------------------
 # 1. Store your name and course in two well-named variables, print both.
+# %%
+student_name = "Rumyana"
+course_code = "CST1510"
+print(student_name, course_code)
+
 # 2. Rewrite this with good names:   x = "srv-01" ; y = 87 ; print(x, y)
+# %%
+server_name = "srv-01"
+usage_percent = 87
+limit = 100
+print(server_name, usage_percent, limit)
+
 # 3. Before running: what does  p = 1 ; q = p ; p = 9 ; print(p, q)  give?
+# it will print 91
+# %%
+p = 1 ; q = p ; p = 9 ; print(p, q)
+
+# %%
