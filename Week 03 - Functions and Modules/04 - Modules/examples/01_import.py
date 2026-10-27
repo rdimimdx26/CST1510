@@ -45,6 +45,25 @@ print(datetime.datetime.now().isoformat())
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Use math to calculate the area of a circle with radius 5 (area = pi * r ** 2).
+# %% 
+import math
+radius = 5
+area = math.pi * radius ** 2 # # area of a circle = π × r²
+print(area)
+
 # 2. Use random.randint to simulate rolling two dice and print their total.
+# %%
+import random
+print(random.randint(1, 8))
+
 # 3. Look up one more function in the math module you have not used before
 #    and try it.
+# %%
+import math
+print(math.ceil(5.7))
+# %%
+import statistics
+readings = [ 3.15, 4.20, 5.7, 6.3, 8.5]
+print(statistics.mean(readings), statistics.median(readings))
+
+# %%
