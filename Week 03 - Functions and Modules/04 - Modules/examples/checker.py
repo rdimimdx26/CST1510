@@ -7,6 +7,9 @@ actually changes what runs. Not meant to be studied on its own - see
 def is_over_limit(value, limit=100):
     return value >= limit
 
+def add(value, limit):
+    return value+limit
+    
 print("checker's __name__ is:", __name__)
 # This block only runs when checker.py is launched directly with
 # `python checker.py` - NOT when another file imports it.

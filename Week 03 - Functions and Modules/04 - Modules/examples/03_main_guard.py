@@ -9,7 +9,7 @@ Then:  python checker.py
 
 # --- 1. Importing checker.py - its __main__ block does NOT run from here ----
 # %%
-print("--- importing checker ---")
+t("--- importing checker ---")
 from checker import is_over_limit
 import checker
 print("--- back in 03_main_guard.py ---")
@@ -40,6 +40,8 @@ if __name__ == "__main__":
 # 2. Now run checker.py on its own (python checker.py). Its guarded prints DO
 #    appear this time - same file, different behaviour, depending on how it
 #    was started.
+
+
 # 3. Add a print() inside checker.py, OUTSIDE its __main__ guard. Run this
 #    file again - does that new print appear now? Why?
 
