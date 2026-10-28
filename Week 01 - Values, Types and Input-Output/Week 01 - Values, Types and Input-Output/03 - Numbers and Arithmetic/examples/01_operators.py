@@ -45,13 +45,14 @@ print(total_minutes, "minutes =", hours, "hours", minutes, "minutes")
 total_seconds = 4831
 
 hours = total_seconds // 3600
-remaining = total_seconds % 3600      # what's left after removing whole hours
+remaining = total_seconds % 3600      # what's left after removing whole hours # 1231
 
-minutes = remaining // 60
-seconds = remaining % 60
+minutes = remaining // 60             # 20 minutes fits whole in 1231 seconds
+seconds = remaining % 60              # remainder 31 seconds
 
 print(total_seconds, "seconds =", hours, "hours,", minutes, "minutes,", seconds, "seconds")
 # Output:  4831 seconds = 1 hours, 20 minutes, 31 seconds
+
 
 
 # --- 4. Order of operations ------------------------------------------------
