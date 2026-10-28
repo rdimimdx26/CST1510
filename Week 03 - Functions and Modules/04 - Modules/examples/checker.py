@@ -20,6 +20,9 @@ if __name__ == "__main__":
     print(is_over_limit(120))   # True
 
 # %%
-print("Outside its __main__guard")
+
 if __name__ == "__main__":
+    print("Outside its __main__guard")
     print("checker.py")
+
+# %%
