@@ -67,5 +67,9 @@ print(f"Free: {total_gb - used_gb:.1f} GB")
 
 # 2. Change one float() to int() and enter 87.5. Read the error.
 # %%
-
+total_gb = float(input("GB total:"))
+used_gb = int(input ("GB used:")) # ValueError: invalid literal for int() with base 10: '87.5'
+print(f"Free: {total_gb - used_gb:.1f} GB")
 # 3. What happens if you just press Enter without typing anything?
+
+# %%
