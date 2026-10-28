@@ -86,7 +86,7 @@ print(a + b) # 27
 print(a - b) # 19
 print(a * b) # 92
 print(a / b) # 5.75
-print(a // b) # 4 fits into 23 five whole times, a remainder is 3
+print(a // b) # 5 fits into 23 five whole times, a remainder is 3
 print(a % b) # 3 / remainder
 print(a ** b) # 279,841 / 23² is 529, and 529 × 529 = 279,841
 
