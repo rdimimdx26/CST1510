@@ -30,7 +30,7 @@ print(type(10 / 2))           # <class 'float'>
 
 print(10 // 3)                # 3
 print(10 % 3)                 # 1
-
+# %%
 total_minutes = 137
 hours = total_minutes // 60
 minutes = total_minutes % 60
@@ -41,7 +41,7 @@ print(total_minutes, "minutes =", hours, "hours", minutes, "minutes")
 # --- 3b. Chain the split for more than one unit -----------------------------
 # One split gives you two units. Do it again on what's left over for a third.
 # Always work from the biggest unit down.
-
+# %%
 total_seconds = 4831
 
 hours = total_seconds // 3600
@@ -62,7 +62,7 @@ print((2 + 3) * 4)            # 20  - brackets happen first
 
 # HABIT WORTH FORMING: use brackets even when you do not need them.
 # They cost nothing and remove all doubt about what you meant.
-
+# %%
 value = 23.7
 limit = 20
 print(value / limit * 100)      # works, but you have to think about it
@@ -82,3 +82,5 @@ print((value / limit) * 100)    # same answer, obvious intent
 # 3. 500 seconds is how many whole minutes, and how many seconds left over?
 # 4. 9137 seconds is how many hours, minutes and seconds? Chain the split
 #    the way section 3b does - hours first, then split what's left over.
+
+# %%
