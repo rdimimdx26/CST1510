@@ -56,4 +56,3 @@ print(pi)
 # 2. Explain, in one sentence, when you would choose "import module" over
 #    "from module import name".
 # I would import module when I want to keep the module name visible, avoid naming collisions and make it clear where a function comes from, and choose from module import name when I want to use a specific function directly without typing the module name each time.
-# %%

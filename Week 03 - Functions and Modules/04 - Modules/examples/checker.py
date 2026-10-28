@@ -9,7 +9,7 @@ def is_over_limit(value, limit=100):
 
 def add(value, limit):
     return value+limit
-    
+
 print("checker's __name__ is:", __name__)
 # This block only runs when checker.py is launched directly with
 # `python checker.py` - NOT when another file imports it.
@@ -18,5 +18,8 @@ if __name__ == "__main__":
     print("checker.py is running directly - this line only appears here")
     print(is_over_limit(87))    # False
     print(is_over_limit(120))   # True
+
+# %%
+
 
 # %%

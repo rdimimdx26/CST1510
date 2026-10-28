@@ -9,7 +9,7 @@ Then:  python checker.py
 
 # --- 1. Importing checker.py - its __main__ block does NOT run from here ----
 # %%
-t("--- importing checker ---")
+print("--- importing checker ---")
 from checker import is_over_limit
 import checker
 print("--- back in 03_main_guard.py ---")
@@ -44,5 +44,8 @@ if __name__ == "__main__":
 
 # 3. Add a print() inside checker.py, OUTSIDE its __main__ guard. Run this
 #    file again - does that new print appear now? Why?
-
+# %%
+print("Outside its __main__guard")
+if __name__ == "__main__":
+    print("checker.py")
 # %%
