@@ -6,7 +6,7 @@ The sums you will actually write.   Run:  python 02_calculations.py
 
 # --- 1. The calculation you will write most often --------------------------
 # "What share of the whole is this?"     (part / total) * 100
-
+# %% 
 value = 23.7
 limit = 20
 
@@ -24,6 +24,7 @@ print(f"{percent:.1f} %")             # 118.5 %
 
 # --- 2. The same sum, three different jobs ---------------------------------
 # AI / Data Science - what share of rows are missing a value
+# %%
 missing_rows = 38
 total_rows = 250
 print("missing:", (missing_rows / total_rows) * 100, "%")
@@ -43,7 +44,7 @@ print("disk   :", (used_gb / total_gb) * 100, "%")
 
 # --- 3. Building on a result -----------------------------------------------
 # Once a value is stored you can use it in the next calculation.
-
+# %% 
 free_gb = total_gb - used_gb
 percent_free = (free_gb / total_gb) * 100
 
@@ -70,5 +71,18 @@ print(total)             # 140
 # --- TRY IT ----------------------------------------------------------------
 # 1. A batch of 250 records ran, 38 failed. Print how many passed, the
 #    percentage that failed, and the percentage that passed.
+# %%
+total_records = 250
+failed = 38
+passed = total_records - failed
+failed_percent = (failed / total_records) * 100
+passed_percent = (passed / total_records) * 100
+
+print(f"Passed: {passed}")
+print(f"Failed: {failed_percent:.1f}%")
+print(f"Passed: {passed_percent:.1f}%")
+
 # 2. Do it without typing any number you could calculate.
 # 3. Start total at 100. Subtract 30, then double it, using short forms.
+
+# %%
