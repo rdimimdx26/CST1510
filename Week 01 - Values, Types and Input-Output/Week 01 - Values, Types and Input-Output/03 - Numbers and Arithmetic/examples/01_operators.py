@@ -78,6 +78,17 @@ print((value / limit) * 100)    # same answer, obvious intent
 
 # --- TRY IT ----------------------------------------------------------------
 # 1. Set a = 23, b = 4. Predict all seven answers BEFORE running.
+# %%
+a = 23
+b = 4
+print(a + b) # 27
+print(a - b) # 19
+print(a * b) # 92
+print(a / b) # 5.75
+print(a // b) # 4 fits into 23 five whole times, a remainder is 3
+print(a % b) # 3 / remainder
+print(a ** b) # 279,841 / 23² is 529, and 529 × 529 = 279,841
+
 # 2. Fix this so it means "10 plus 6, divided by 2":   print(10 + 6 / 2)
 # 3. 500 seconds is how many whole minutes, and how many seconds left over?
 # 4. 9137 seconds is how many hours, minutes and seconds? Chain the split
