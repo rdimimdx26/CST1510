@@ -23,5 +23,3 @@ if __name__ == "__main__":
 print("Outside its __main__guard")
 if __name__ == "__main__":
     print("checker.py")
-
-# %%
