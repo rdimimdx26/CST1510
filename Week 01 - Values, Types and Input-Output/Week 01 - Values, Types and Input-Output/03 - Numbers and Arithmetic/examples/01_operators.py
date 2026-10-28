@@ -91,8 +91,25 @@ print(a % b) # 3 / remainder
 print(a ** b) # 279,841 / 23² is 529, and 529 × 529 = 279,841
 
 # 2. Fix this so it means "10 plus 6, divided by 2":   print(10 + 6 / 2)
-# 3. 500 seconds is how many whole minutes, and how many seconds left over?
+# %%
+a = 10
+b = 6
+print(f"{(a + b) / 2}") # f-string only calculates what’s inside { }
+# %%
+a = 10
+b = 6
+print((a + b)/2)
+
+# 3. 500 seconds is how many whole minutes, and how many seconds left over? 
+# There are 8 whole minutes and remainder is 20 seconds.
+
 # 4. 9137 seconds is how many hours, minutes and seconds? Chain the split
 #    the way section 3b does - hours first, then split what's left over.
-
+# %%
+total_seconds = 9137
+hours = total_seconds // 3600
+remaining = total_seconds % 3600
+minutes = remaining //60
+seconds = remaining % 60
+print(total_seconds, "seconds =", hours, "hours,", minutes, "minutes,", seconds, "seconds")
 # %%
