@@ -60,5 +60,12 @@ print(type(value))            # <class 'float'>
 
 # --- TRY IT ----------------------------------------------------------------
 # 1. Ask for GB used and GB total, convert both, print how many GB are free.
+# %%
+total_gb = float(input("GB total:"))
+used_gb = float(input ("GB used:"))
+print(f"Free: {total_gb - used_gb:.1f} GB")
+
 # 2. Change one float() to int() and enter 87.5. Read the error.
+# %%
+
 # 3. What happens if you just press Enter without typing anything?
