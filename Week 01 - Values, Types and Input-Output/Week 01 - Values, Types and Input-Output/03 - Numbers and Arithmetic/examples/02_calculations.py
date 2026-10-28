@@ -83,6 +83,23 @@ print(f"Failed: {failed_percent:.1f}%")
 print(f"Passed: {passed_percent:.1f}%")
 
 # 2. Do it without typing any number you could calculate.
+# %%
+total_records = int(input("Total records: "))
+failed = int(input("Failed records: "))
+passed = total_records - failed
+failed_percent = (failed / total_records) * 100
+passed_percent = (passed / total_records) * 100
+
+print(f"Passed: {passed}")
+print(f"Failed: {failed_percent:.1f}%")
+print(f"Passed: {passed_percent:.1f}%")
 # 3. Start total at 100. Subtract 30, then double it, using short forms.
+# %%
+total = 100
+total -= 30
+total *= 2
+
+print(total)
+
 
 # %%
