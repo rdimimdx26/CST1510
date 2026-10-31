@@ -64,7 +64,7 @@ print(record["limit"])
 
 # %%
 record = {"label": "keys", "value": "Office", "limit":3}
-record.get("label")
+record.get("label") # Python does not show it, as .get fetches the value. To display the label we need the print function.
 record.get("value")
 
 # 2. Add a fourth key to your dict, then update one of the original three.
