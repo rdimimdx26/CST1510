@@ -31,7 +31,7 @@ for key, value in record.items():
 
 # %%
 for key, value in record():
-    print(record,record[key])    
+    print(record,record[key])   # another way to get both keyand value without .items() 
 
 # --- 4. Building a report line from a dict --------------------------------
 # %%
