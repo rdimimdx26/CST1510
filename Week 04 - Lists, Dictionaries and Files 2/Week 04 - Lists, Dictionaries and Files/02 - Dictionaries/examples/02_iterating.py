@@ -6,8 +6,6 @@ Run:  python 02_iterating.py
 """
 # %%
 record = {"label": "R-001", "value": 87.0, "limit": 100.0}
-for key in record:   
-    print(key, record[key])   # another way to get the key-value pair without .items()
 
 
 # --- 1. .keys() - just the names --------------------------------------
@@ -29,15 +27,14 @@ for value in record.values():
 # This is the one you will use most.
 # %%
 for key, value in record.items():
-    print(f"{key}: {value}")
+    print(f"{key}: {value}")    
 
 # %%
 for key, value in record():
-    print(record,record{key})    
-
+    print(record,record[key])    
 
 # --- 4. Building a report line from a dict --------------------------------
-
+# %%
 for key, value in record.items():
     print(f"  {key:<10}: {value}")
 # %%
