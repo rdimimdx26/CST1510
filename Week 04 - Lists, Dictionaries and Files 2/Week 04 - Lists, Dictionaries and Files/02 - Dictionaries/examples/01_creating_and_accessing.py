@@ -84,6 +84,7 @@ post_codes["M1 1AE"] = "Manchester"
 print(post_codes)
 
 # %%
+# We can write it also like this:
 record = {"label": "keys", "value": "Office", "limit": 3}
 record.update(limit=5, unit="items") # This doesn’t work for keys with spaces like "KT13 0UN".
 print(record)
