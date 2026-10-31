@@ -6,7 +6,7 @@ Run:  python 01_creating_and_accessing.py
 """
 
 # --- 1. Creating a dictionary -------------------------------------------
-
+# %%
 record = {
     "label": "R-001",
     "value": 87.0,
@@ -19,6 +19,7 @@ print(type(record))
 
 # --- 2. Accessing by key, not position ------------------------------------
 
+
 print(record["label"])     # R-001
 print(record["value"])      # 87.0
 
@@ -27,7 +28,7 @@ print(record["value"])      # 87.0
 
 # --- 3. Adding or updating a key ---------------------------------------
 # The same line does both. If the key exists, it updates. If not, it adds.
-
+# %%
 record["status"] = "OK"       # new key - added
 record["value"] = 90.0         # existing key - updated
 
@@ -56,6 +57,19 @@ print(server["hostname"], server["used_gb"], "/", server["total_gb"], "GB")
 # --- TRY IT ------------------------------------------------------------------
 # 1. Create a dict for one record with label, value and limit. Print two of
 #    its values.
+# %%
+record = {"label":"Class", "value": 1, "limit": 30}
+print(record["label"])
+print(record["limit"])
+
+# %%
+record = {"label": "keys", "value": "Office", "limit":3}
+record.get("label")
+record.get("value")
+
 # 2. Add a fourth key to your dict, then update one of the original three.
+
 # 3. Use .get() to safely check for a key you know does not exist, with a
 #    default of your choosing.
+
+# %%
