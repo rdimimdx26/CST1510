@@ -96,3 +96,8 @@ courses = {"Chemistry": 3, "Biology": 2,  "Geography": 1, "Mathematics": "None"}
 print(courses.get("Literature"))
 
 # %%
+cities = {"London": "UK", "Paris": "France", "Prague": "Czech Republic"}
+cities.update({"Rome": "Italy"})
+print(cities)
+
+# %%
