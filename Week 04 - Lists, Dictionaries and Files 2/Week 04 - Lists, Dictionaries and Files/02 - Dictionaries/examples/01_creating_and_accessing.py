@@ -83,6 +83,10 @@ post_codes = {"KT13 0UN": "Weybridge", "GL52 2SX": "Glaucester", "SL1 2SD": "Slo
 post_codes["M1 1AE"] = "Manchester"
 print(post_codes)
 
+# %%
+record = {"label": "keys", "value": "Office", "limit": 3}
+record.update(limit=5, unit="items") # This doesn’t work for keys with spaces like "KT13 0UN".
+print(record)
 
 # 3. Use .get() to safely check for a key you know does not exist, with a
 #    default of your choosing.
