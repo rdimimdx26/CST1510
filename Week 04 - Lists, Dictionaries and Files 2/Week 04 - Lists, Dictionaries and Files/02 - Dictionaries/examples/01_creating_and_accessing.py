@@ -71,9 +71,20 @@ record.get("value")
 record = {"label": "keys", "value": "Office", "limit":3}
 print(record.get("label")) # gets the value and shows it.
 record.get("value")
+
+# %%
+record = {"label": "keys", "value": "Office", "limit":3}
+print(record.get("label")) 
+print(record.get("value")) # unpacks it
+
 # 2. Add a fourth key to your dict, then update one of the original three.
+# %%
+post_codes = {"KT13 0UN": "Weybridge", "GL52 2SX": "Glaucester", "SL1 2SD": "Slough"}
+post_codes["M1 1AE"] = "Manchester"
+print(post_codes)
+
 
 # 3. Use .get() to safely check for a key you know does not exist, with a
 #    default of your choosing.
-
 # %%
+
