@@ -4,11 +4,14 @@ ITERATING OVER A DICTIONARY
 Looping over keys, values, or both at once.
 Run:  python 02_iterating.py
 """
-
+# %%
 record = {"label": "R-001", "value": 87.0, "limit": 100.0}
+for key in record:   
+    print(key, record[key])   # another way to get the key-value pair without .items()
+
 
 # --- 1. .keys() - just the names --------------------------------------
-
+# %%
 for key in record.keys():
     print(key)
 
@@ -17,23 +20,29 @@ for key in record.keys():
 
 
 # --- 2. .values() - just the values -----------------------------------
-
+# %%
 for value in record.values():
     print(value)
 
 
 # --- 3. .items() - both at once, as pairs -------------------------------
 # This is the one you will use most.
-
+# %%
 for key, value in record.items():
     print(f"{key}: {value}")
+
+# %%
+for key, value in record():
+    print(record,record{key})    
 
 
 # --- 4. Building a report line from a dict --------------------------------
 
 for key, value in record.items():
     print(f"  {key:<10}: {value}")
-
+# %%
+info = {"age": 20}
+print(f"Age: {info["age"]}")   
 
 # --- 5. zip() - building a dict from two separate lists ---------------------
 
@@ -54,3 +63,5 @@ print(dict(zip(["a", "b", "c"], [1, 2])))   # {'a': 1, 'b': 2} - 'c' silently dr
 # 2. Predict, then check: what does list(record.keys()) give you?
 # 3. Write a loop that prints only the numeric values from a dict (hint:
 #    check the type of each value as you go).
+
+# %%
