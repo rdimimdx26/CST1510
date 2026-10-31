@@ -87,4 +87,7 @@ print(post_codes)
 # 3. Use .get() to safely check for a key you know does not exist, with a
 #    default of your choosing.
 # %%
+courses = {"Chemistry": 3, "Biology": 2,  "Geography": 1, "Mathematics": "None"}
+print(courses.get("Literature"))
 
+# %%
