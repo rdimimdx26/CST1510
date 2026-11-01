@@ -65,8 +65,14 @@ for key, value in cosmetics.items():
    #print(f"{item}: {cosmetics[item]}")
 
 # 2. Predict, then check: what does list(record.keys()) give you?
+# %%
+record = {"label": "R-001", "value": 87.0, "limit": 100.0}
+print(list(record.keys())) # It gives a list of the keys.
+
 # 3. Write a loop that prints only the numeric values from a dict (hint:
 #    check the type of each value as you go).
-
-
 # %%
+temperatures = {"Monday": 12, "Tuesday": 15, "Wednesday": 9, "Thursday": 14, "Friday": 11}
+for value in temperatures.values():
+    print(value, type(value))
+
