@@ -63,8 +63,14 @@ print(len(unique_values))  # 3
 words = {87, "banana", "cherry", "date", 87, "banana"}
 print(len(words))  # 4
 
-# %%
+
 # 2. Given two lists of IPs, use sets to find which addresses appear in both.
+# %%
+list1 = ["10.0.0.5", "10.0.0.6", "10.0.0.9"]
+list2 = ["10.0.0.5", "10.0.0.7", "10.0.0.9"]
+common_ips = set(list1) & set(list2)
+print(common_ips)  # {'10.0.0.5', '10.0.0.9'}
+
 # 3. Predict, then check: what does {1, 1, 2, 2, 3} give you when printed?
 
 # %%
