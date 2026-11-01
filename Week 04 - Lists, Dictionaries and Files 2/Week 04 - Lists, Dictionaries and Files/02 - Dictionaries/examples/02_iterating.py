@@ -42,7 +42,7 @@ info = {"age": 20}
 print(f"Age: {info["age"]}")   
 
 # --- 5. zip() - building a dict from two separate lists ---------------------
-
+# %%
 hostnames = ["srv-01", "srv-02", "srv-03"]
 disk_used = [87, 45, 120]
 
@@ -57,8 +57,10 @@ print(dict(zip(["a", "b", "c"], [1, 2])))   # {'a': 1, 'b': 2} - 'c' silently dr
 # --- TRY IT ------------------------------------------------------------------
 # 1. Loop over your own dict from Topic 2's first example using .items() and
 #    print "key: value" for each pair.
+# %%
+
+
 # 2. Predict, then check: what does list(record.keys()) give you?
 # 3. Write a loop that prints only the numeric values from a dict (hint:
 #    check the type of each value as you go).
 
-# %%
