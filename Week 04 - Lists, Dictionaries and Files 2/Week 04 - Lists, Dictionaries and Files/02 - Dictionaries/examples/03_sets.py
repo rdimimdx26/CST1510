@@ -5,7 +5,7 @@ Only unique values, no order, no indexing.   Run:  python 03_sets.py
 """
 
 # --- 1. Creating a set ------------------------------------------------------
-
+# %%
 labels = ["R-001", "R-002", "R-001", "R-003", "R-002"]
 unique_labels = set(labels)
 
@@ -15,7 +15,7 @@ print(len(unique_labels))      # 3, not 5
 
 # --- 2. The {} trap -----------------------------------------------------
 # {} on its own is an empty DICT, not an empty set. This catches everyone once.
-
+# %%
 empty_dict = {}
 empty_set = set()
 
@@ -26,7 +26,7 @@ print(type(empty_set))       # <class 'set'>
 # --- 3. Fast membership checks ------------------------------------------
 # Checking "is this value in here" is far quicker on a set than a list, once
 # there are a lot of values - worth knowing even before it matters at scale.
-
+# %%
 blocked_ips = {"10.0.0.5", "10.0.0.9", "192.168.1.1"}
 
 print("10.0.0.5" in blocked_ips)     # True
@@ -58,3 +58,5 @@ print(todays_ips - blocked_ips)    # {'10.0.0.6'} - in today's, not blocked
 #    unique values it contains.
 # 2. Given two lists of IPs, use sets to find which addresses appear in both.
 # 3. Predict, then check: what does {1, 1, 2, 2, 3} give you when printed?
+
+# %%
