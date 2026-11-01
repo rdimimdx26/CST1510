@@ -4,7 +4,7 @@ WRITING AND READING FILES
 Everything so far disappears when the program ends. A file does not.
 Run:  python 01_writing_and_reading.py
 """
-
+# %%
 # --- 1. Writing - "w" mode ------------------------------------------------
 # with...as automatically closes the file for you, even if something goes
 # wrong partway through. Always use it.
@@ -64,3 +64,5 @@ with open("hosts.txt") as f:
 # 2. Read my_notes.txt back and print it.
 # 3. Predict, then check: what happens if you open a file with "w" that
 #    already has content in it?
+
+# %%
