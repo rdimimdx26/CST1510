@@ -56,6 +56,14 @@ print(todays_ips - blocked_ips)    # {'10.0.0.6'} - in today's, not blocked
 # --- TRY IT ------------------------------------------------------------------
 # 1. Given a list with some repeated values, use a set to find out how many
 #    unique values it contains.
+# %%
+unique_values = set([1, 2, 2, 3, 3, 3])
+print(len(unique_values))  # 3
+# %%
+words = {87, "banana", "cherry", "date", 87, "banana"}
+print(len(words))  # 4
+
+# %%
 # 2. Given two lists of IPs, use sets to find which addresses appear in both.
 # 3. Predict, then check: what does {1, 1, 2, 2, 3} give you when printed?
 
