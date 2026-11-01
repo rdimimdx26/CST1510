@@ -70,8 +70,15 @@ list1 = ["10.0.0.5", "10.0.0.6", "10.0.0.9"]
 list2 = ["10.0.0.5", "10.0.0.7", "10.0.0.9"]
 common_ips = set(list1) & set(list2)
 print(common_ips)  # {'10.0.0.5', '10.0.0.9'}
+# %%
+list1 = ["apple", "banana", "cherry"]
+list2 = ["banana", "cherry", "date"]
+common_fruits = set(list1) & set(list2)
+print(common_fruits)  # {'banana', 'cherry'}
 
 # 3. Predict, then check: what does {1, 1, 2, 2, 3} give you when printed?
 
 # %%
 print({1, 1, 2, 2, 3})  # {1, 2, 3} removes duplicates. Order not guaranteed.
+
+# %%
