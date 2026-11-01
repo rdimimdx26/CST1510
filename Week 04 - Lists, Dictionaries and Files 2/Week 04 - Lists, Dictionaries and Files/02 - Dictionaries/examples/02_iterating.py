@@ -58,9 +58,15 @@ print(dict(zip(["a", "b", "c"], [1, 2])))   # {'a': 1, 'b': 2} - 'c' silently dr
 # 1. Loop over your own dict from Topic 2's first example using .items() and
 #    print "key: value" for each pair.
 # %%
-
+cosmetics = {"lipglosses":"pink", "eyeshadows": "shimmer", "powder": "compress"}
+for key, value in cosmetics.items():
+    print(f"{key}: {value}")
+   # for item in cosmetics:
+   #print(f"{item}: {cosmetics[item]}")
 
 # 2. Predict, then check: what does list(record.keys()) give you?
 # 3. Write a loop that prints only the numeric values from a dict (hint:
 #    check the type of each value as you go).
 
+
+# %%
