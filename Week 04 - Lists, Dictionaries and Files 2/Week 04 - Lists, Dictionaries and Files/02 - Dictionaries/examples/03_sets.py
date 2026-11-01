@@ -74,3 +74,4 @@ print(common_ips)  # {'10.0.0.5', '10.0.0.9'}
 # 3. Predict, then check: what does {1, 1, 2, 2, 3} give you when printed?
 
 # %%
+print({1, 1, 2, 2, 3})  # {1, 2, 3} removes duplicates. Order not guaranteed.
