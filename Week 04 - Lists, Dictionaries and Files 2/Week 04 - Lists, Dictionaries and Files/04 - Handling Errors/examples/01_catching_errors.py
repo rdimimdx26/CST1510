@@ -63,6 +63,19 @@ except ValueError as e:
 # --- TRY IT ------------------------------------------------------------------
 # 1. Write a function that asks for a number with input() and int(), catching
 #    ValueError and asking again if it fails. (Hint: wrap it in a while loop.)
+# %%
+def get_number():
+    while True:
+        try:
+            number = int(input("Enter a number: "))
+            return number
+        except ValueError:
+            print("That's not a valid number, try again.")
+
+
+num = get_number()
+print("You entered:", num)
+
 # 2. Trigger a FileNotFoundError on purpose, on a file you know doesn't exist.
 #    Read the traceback - which line does Python say the error happened on?
 # 3. Add a second except block to section 2 that also catches PermissionError.
