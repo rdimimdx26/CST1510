@@ -77,5 +77,11 @@ num = get_number()
 print("You entered:", num)
 
 # 2. Trigger a FileNotFoundError on purpose, on a file you know doesn't exist.
+# %%
+with open("this_file_does_not_exist.txt", "r") as f:
+    print(f.read())
+    
 #    Read the traceback - which line does Python say the error happened on?
 # 3. Add a second except block to section 2 that also catches PermissionError.
+
+# %%
