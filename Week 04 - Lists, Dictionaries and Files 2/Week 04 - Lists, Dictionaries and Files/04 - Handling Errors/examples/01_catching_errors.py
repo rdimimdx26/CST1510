@@ -6,7 +6,7 @@ Run:  python 01_catching_errors.py
 """
 
 # --- 1. try / except - the basic shape --------------------------------------
-
+# %%
 try:
     value = int("abc")
 except ValueError:
@@ -17,7 +17,7 @@ print(value)     # 0 - the program kept going
 
 
 # --- 2. A file that might not exist ------------------------------------------
-
+# %%
 try:
     with open("missing.txt") as f:
         text = f.read()
@@ -29,7 +29,7 @@ print(repr(text))     # ''
 
 
 # --- 3. Multiple except blocks - checked in order, first match wins ----------
-
+# %%
 def safe_divide(a, b):
     try:
         return a / b
