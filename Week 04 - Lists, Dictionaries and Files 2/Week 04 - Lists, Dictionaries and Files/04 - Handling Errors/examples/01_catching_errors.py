@@ -83,5 +83,11 @@ with open("this_file_does_not_exist.txt", "r") as f:
     
 #    Read the traceback - which line does Python say the error happened on?
 # 3. Add a second except block to section 2 that also catches PermissionError.
-
 # %%
+try:
+    with open("this_file_does_not_exist.txt", "r") as f:
+        print(f.read())
+except FileNotFoundError:
+    print("File not found.")
+except PermissionError:
+    print("Permission denied.")
