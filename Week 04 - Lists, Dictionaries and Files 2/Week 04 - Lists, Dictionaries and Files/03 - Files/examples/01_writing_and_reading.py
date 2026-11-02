@@ -61,7 +61,16 @@ with open("hosts.txt") as f:
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Write 3 lines of your own to a new file called my_notes.txt.
+# %%
+with open("my_notes.txt", "w") as f:
+    f.write("My first note\n")
+    f.write("My second note\n")
+    f.write("My third note\n")
+
 # 2. Read my_notes.txt back and print it.
+with open("my_notes.txt") as f:
+    print(f.read())
+
 # 3. Predict, then check: what happens if you open a file with "w" that
 #    already has content in it?
 
