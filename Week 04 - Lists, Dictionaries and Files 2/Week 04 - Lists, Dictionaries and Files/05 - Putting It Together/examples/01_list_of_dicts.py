@@ -7,7 +7,7 @@ Run:  python 01_list_of_dicts.py
 """
 
 # --- 1. Build one by hand first, before loading anything -------------------
-
+# %%
 records = [
     {"label": "R-001", "value": 87.0, "limit": 100.0},
     {"label": "R-002", "value": 120.0, "limit": 100.0},
@@ -65,5 +65,15 @@ for server in server_rows:
 # --- TRY IT ------------------------------------------------------------------
 # 1. Build a list of 2 dicts by hand, each with label, value and limit.
 #    Loop over it and print just the label from each.
+# %% 
+records = [
+    {"label": "R-004", "value": 86.0, "limit": 100.0},
+    {"label": "R-006", "value": 110.0, "limit": 100.0}]
+for record in records:
+    print(record["label"])
+    
+
 # 2. Add a "status" key to each dict in your list, inside the loop, based
 #    on whether value is over limit.
+
+# %%
