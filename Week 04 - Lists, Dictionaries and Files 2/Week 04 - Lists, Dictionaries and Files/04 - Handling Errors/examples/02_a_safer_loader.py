@@ -99,4 +99,5 @@ print(records)
 # The load_records read a file and turn it into records. It doesn’t need to know what should happen when something goes wrong.
 #If the try/except were inside load_records, every program using it would be forced to get [] silently, which is the silent mistake danger from the add_tax.
 # By wrapping the call instead, code that wants the safe behaviour uses safe_load_records, and 
-# code that wants the error to show uses load_records directly.
+# code that wants the error to show uses load_records directly, instead of every caller being forced to
+# silently get an empty list.
