@@ -77,3 +77,14 @@ for record in records:
 #    on whether value is over limit.
 
 # %%
+records = [
+    {"label": "R-004", "value": 86.0, "limit": 100.0},
+    {"label": "R-006", "value": 110.0, "limit": 100.0}]
+for record in records:
+    if record["value"] > record["limit"]:
+        record["status"] = "OVER LIMIT"
+    else:
+        record["status"] = "OK"
+    print(record["label"], record["status"])
+
+# %%
