@@ -1,3 +1,5 @@
 R-001,87,100
 this line is not shaped right
 R-003,45,100
+R-004,invalid,100
+R-005,75,invalid

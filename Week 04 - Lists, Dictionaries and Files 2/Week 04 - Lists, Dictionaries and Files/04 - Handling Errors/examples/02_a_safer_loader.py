@@ -83,7 +83,20 @@ print(records)
 # 2. Add a third bad line to broken_records.txt (e.g. a value that isn't a
 #    number) and confirm it gets skipped too, not just lines with the wrong
 #    number of fields.
+# %% 
+with open("broken_records.txt", "w") as f:
+    f.write("R-001,87,100\n")
+    f.write("this line is not shaped right\n")     # only one field, not three
+    f.write("R-003,45,100\n")
+    f.write("R-004,invalid,100\n")  # a value that isn't a number
+    f.write("R-005,75,invalid\n")  # another value that isn't a number
+records = safe_load_records_v2("broken_records.txt")
+print(records)
+
 # 3. In your own words: why does section 2 wrap the CALL to load_records,
 #    instead of putting a try/except inside load_records itself?
-
-# %%
+# The caller decides how to handle the problem, not load_records itself and different situations need different reactions to a missing file.
+# The load_records read a file and turn it into records. It doesn’t need to know what should happen when something goes wrong.
+#If the try/except were inside load_records, every program using it would be forced to get [] silently, which is the silent mistake danger from the add_tax.
+# By wrapping the call instead, code that wants the safe behaviour uses safe_load_records, and 
+# code that wants the error to show uses load_records directly.
