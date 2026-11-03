@@ -18,7 +18,7 @@ def load_records(path):
 # --- 1. What happens right now, with no protection ---------------------------
 # load_records("does_not_exist.txt") would crash with FileNotFoundError.
 # Watch it happen once, on purpose, before you fix it:
-# %%
+
 try:
     load_records("does_not_exist.txt")
 except FileNotFoundError:
@@ -69,6 +69,17 @@ print(safe_load_records_v2("broken_records.txt"))
 # --- TRY IT ------------------------------------------------------------------
 # 1. Call safe_load_records on a file you know exists - confirm it still works
 #    normally, not just when something is missing.
+# %%
+def safe_load_records(filename):
+    """Like load_records, but returns [] instead of crashing if path is missing."""
+    try:
+        return load_records(filename)
+    except FileNotFoundError:
+        print(f"{filename} not found - starting with an empty list")
+        return []
+records = safe_load_records("records.txt")
+print(records)
+
 # 2. Add a third bad line to broken_records.txt (e.g. a value that isn't a
 #    number) and confirm it gets skipped too, not just lines with the wrong
 #    number of fields.
