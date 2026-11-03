@@ -16,7 +16,7 @@ reports on each one.
 
 records.txt holds one record per line:   label,value,limit
 """
-
+# %%
 def load_records(path):
     """Read label,value,limit lines from a file and return a list of dicts."""
     records = []
@@ -30,7 +30,7 @@ def load_records(path):
             })
     return records
 
-
+# %%
 def check_record(value, limit, warning_at=90):
     """Work out the difference, percentage and status for one record."""
     difference = value - limit
@@ -45,7 +45,7 @@ def check_record(value, limit, warning_at=90):
 
     return difference, percent, status
 
-
+# %%
 def print_report(label, value, limit, difference, percent, status):
     """Print one bordered report. Nothing is worked out in here - only shown."""
     print()
@@ -60,7 +60,7 @@ def print_report(label, value, limit, difference, percent, status):
     print("=" * 34)
     print()
 
-
+# %%
 records = load_records("records.txt")
 
 over_limit_count = 0
@@ -73,3 +73,5 @@ for record in records:                      # <- a dict, one per record, from th
         over_limit_count += 1
 
 print(f"Checked {len(records)} records. {over_limit_count} were over limit.")
+
+# %%
