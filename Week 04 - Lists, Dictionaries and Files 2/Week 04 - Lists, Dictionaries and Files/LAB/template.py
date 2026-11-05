@@ -8,10 +8,6 @@ Date  :
 
 Run it:   python template.py
 
-Work through the numbered sections in order. Each one tells you what it must do.
-Delete these instructions as you replace them with your code.
-"""
-
 # =================================================================== FUNCTIONS
 # 1. Bring back check_record(value, limit) and print_report(...) from Week 3
 #    (copy them, or rewrite them - either is fine). check_record returns
@@ -20,12 +16,30 @@ Delete these instructions as you replace them with your code.
 #    one-line docstring.
 
 # your function(s) go here
+# %%
 def check_record(value, limit):
-    """Check if the value exceeds the limit and return difference, percent, and status."""
+    """Checking if value exceeds the limit and return difference, percent, and status."""
     difference = value - limit
     percent = (value / limit) * 100
-    status = "OVER LIMIT" if difference > 0 else "WITHIN LIMIT"
+    if percent > 100:
+        status = "OVER LIMIT"
+    elif percent >= 85:
+        status = "WARNING"
+    else:
+        status = "OK"
+
     return difference, percent, status
+
+def print_report(value, limit, difference, percent, status):
+    """Print a report showing the value, limit, difference and status."""
+
+    print(f"Value: {value}")
+    print(f"Limit: {limit}")
+    print(f"Difference: {difference}")
+    print(f"Percentage: {percent:.1f}%")
+    print(f"Status: {status}")
+
+
 
 
 # ====================================================================== STORE
@@ -58,3 +72,5 @@ records = []   # replace with your code
 #    [ ] If you are loading from a file, check what happens when the file
 #        does not exist - write the error down
 #    [ ] Check every function still does one job
+
+# %%

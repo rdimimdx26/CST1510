@@ -8,10 +8,6 @@ Date  :
 
 Run it:   python template.py
 
-Work through the numbered sections in order. Each one tells you what it must do.
-Delete these instructions as you replace them with your code.
-"""
-
 # =================================================================== FUNCTIONS
 # 1. Write a function called status_of(percent) that returns "OVER LIMIT"
 #    (100% or more), "WARNING" (90% or more), or "OK" (anything else).
