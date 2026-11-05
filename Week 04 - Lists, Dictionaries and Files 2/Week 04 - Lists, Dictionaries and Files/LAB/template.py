@@ -20,6 +20,12 @@ Delete these instructions as you replace them with your code.
 #    one-line docstring.
 
 # your function(s) go here
+def check_record(value, limit):
+    """Check if the value exceeds the limit and return difference, percent, and status."""
+    difference = value - limit
+    percent = (value / limit) * 100
+    status = "OVER LIMIT" if difference > 0 else "WITHIN LIMIT"
+    return difference, percent, status
 
 
 # ====================================================================== STORE
