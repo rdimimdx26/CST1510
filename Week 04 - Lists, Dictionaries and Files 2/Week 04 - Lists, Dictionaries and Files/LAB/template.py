@@ -96,9 +96,9 @@ for record in records:                                                          
     print_report(record["label"], record["value"], record["limit"], difference, percent, status)  
     results.append((record["label"], status))                                                     # remembers the label and status for the file
 
-save_results("results.txt", results)  
+save_results("results.txt", results)                                                              # # save_results is not indented, so it runs once, after the loop has finished   
 
-                                             # save_results is not indented, so it runs once, after the loop has finished   
+                                             
 
 def print_report(label, value, limit, difference, percent, status):
     """Print a report showing the label, value, limit, difference, percent and status."""
