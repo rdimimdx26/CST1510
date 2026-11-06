@@ -3,7 +3,7 @@ RECORD CHECK  -  my version
 ===========================
 
 Name  :
-Lane  :  AI / Cyber / IT      (delete two)
+Lane  :  AI 
 Date  :
 
 Run it:   python template.py
@@ -16,6 +16,16 @@ Delete these instructions as you replace them with your code.
 # 1. Write parse_line(raw_line) that cleans and parses one raw, messy line
 #    into a dict. Handle inconsistent spacing and case - that is the whole
 #    point of this week.
+
+def parse_line(raw_line):
+    """Clean and parse one raw, messy line into a dict."""
+    for piece in raw_line.split(","):
+        key, value = piece.split("=")
+        print(f"{key.strip().lower()}: {value.strip()}")
+        
+    
+    
+
 #
 #    Typical and above: also write status_of(...), shaped for your lane
 #    (e.g. OVER LIMIT / WARNING / OK, or FLAGGED / OK). Give both a

@@ -19,4 +19,4 @@ with open("messy_lines.txt") as f:
         total = int(parts[2].split("=")[1].strip())     
 
         print(f"{name}: {used}/{total}")
-        
+
