@@ -56,6 +56,21 @@ records = [{"label": "Server1", "value": 95, "limit": 100},
 #    Typical   : instead, write a function load_records(path) that reads
 #                label,value,limit lines from a file and returns the list.
 #                Make your own data file, one record per line.
+# %%
+def load_records(path):
+    records = []
+    with open (path) as f:
+        for line in f:
+            line = line.strip()
+            if line == "":
+                continue
+            label, value, limit = line.split(",")
+            records.append ({"label": label.strip(),
+                             "value": float(value),
+                             "limit": float(limit),})   # trailing comma, and it’s optional. Python allows a comma after the last item in a dictionary, list or function call, and ignores it.
+            return records
+        records = load_records ("records.txt")
+
 #    Excellent : also write the results out to a new file (one line per
 #                record: label, status), as well as printing them.
 
