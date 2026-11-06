@@ -18,7 +18,7 @@ Run it:   python template.py
 # your function(s) go here
 # %%
 def check_record(value, limit):
-    """Checking if value exceeds the limit and return difference, percent, and status."""
+    """Checking if value exceeds the limit and returns difference, percent, and status."""
     difference = value - limit
     percent = (value / limit) * 100
     if percent > 100:

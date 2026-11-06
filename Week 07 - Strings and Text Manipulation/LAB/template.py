@@ -16,20 +16,24 @@ Delete these instructions as you replace them with your code.
 # 1. Write parse_line(raw_line) that cleans and parses one raw, messy line
 #    into a dict. Handle inconsistent spacing and case - that is the whole
 #    point of this week.
-
+# %%
 def parse_line(raw_line):
     """Clean and parse one raw, messy line into a dict."""
+    result = {}
     for piece in raw_line.split(","):
         key, value = piece.split("=")
-        print(f"{key.strip().lower()}: {value.strip()}")
-        
-    
-    
+        result[key.strip().lower()] = value.strip()
 
-#
+    return result
+
+
 #    Typical and above: also write status_of(...), shaped for your lane
 #    (e.g. OVER LIMIT / WARNING / OK, or FLAGGED / OK). Give both a
 #    one-line docstring.
+
+
+
+
 
 # your function(s) go here
 
@@ -39,6 +43,22 @@ def parse_line(raw_line):
 #    and case. Match the shape to your lane:
 #
 #    AI / Data Science : "  Survey_2026 , rating=4 , age=23  "
+# %%
+with open("messy_records.txt") as f:
+    for record in f:
+        raw_records = record.strip()
+        if raw_records == "" or record.startswith("#"):
+            continue                      
+
+        parts = raw_records.split(",")           
+
+        name = parts[0].strip().upper()                 
+        rating = int(parts[1].split("=")[1].strip())     
+        age = int(parts[2].split("=")[1].strip()) 
+
+
+        print(f"records{name}: {rating}/{age}")
+
 #    Cyber Security     : "SRC=10.0.0.5,ATTEMPTS=12,RESULT=FAILED"
 #    IT                  : "  Srv-01 , used=87 , total=100  "
 #
@@ -67,3 +87,5 @@ for raw_record in raw_records:
 #    [ ] Run it with a value that will not convert to a number - write the
 #        error down
 #    [ ] Check every function does one job, with a docstring
+
+# %%
