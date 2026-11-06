@@ -39,7 +39,8 @@ def print_report(value, limit, difference, percent, status):
     print(f"Percentage: {percent:.1f}%")
     print(f"Status: {status}")
 
-
+difference, percent, status = check_record(87, 100)  # test
+print_report(87, 100, difference, percent, status)   # test
 
 
 # ====================================================================== STORE
