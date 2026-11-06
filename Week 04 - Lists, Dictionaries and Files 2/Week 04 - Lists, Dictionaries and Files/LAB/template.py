@@ -87,15 +87,25 @@ def save_results(path, results):
 # =============================================================== PROCESS + OUTPUT
 # 3. Loop over records. For each one, call check_record and print_report.
 #
-results = []                                                                     # empty list before the loop starts. It’s where the label and status of each record get collected.
+results = []                                                                         # empty list before the loop starts. It’s where the label and status of each record get collected.It works the same way as over_count = 0
 
-for record in records:                                                           # takes each dictionary from the list in turn 
+for record in records:                                                               # takes each dictionary from the list in turn 
 
-    difference, percent, status = check_record(record["value"], record["limit"]) # check_record returns three values, which are unpacked into three variables.
-    print_report(record["value"], record["limit"], difference, percent, status)  # pulls the numbers out of that dictionary by their keys
-    results.append((record["label"], status))                                    # remembers the label and status for the file
+    difference, percent, status = check_record(record["value"], record["limit"])     # check_record returns three values, which are unpacked into three variables.
+    print_report(record["value"], record["limit"], difference, percent, status)      # pulls the numbers out of that dictionary by their keys
+    results.append((record["label"], status))                                        # remembers the label and status for the file
 
-save_results("results.txt", results)                                             # save_results is not indented, so it runs once, after the loop has finished   
+save_results("results.txt", results)                                                 # save_results is not indented, so it runs once, after the loop has finished   
+
+def print_report(label, value, limit, difference, percent, status):
+    """Print a report showing the label, value, limit, difference, percent and status."""
+    print(f"Record: {label}")
+    print(f"Value: {value}")
+    print(f"Limit: {limit}")
+    print(f"Difference: {difference:.2f}")
+    print(f"Percentage: {percent:.1f}%")
+    print(f"Status: {status}")
+    print()
 
 #    Excellent : also keep a running count of how many were OVER LIMIT, and
 #                print that once, after the loop ends.
