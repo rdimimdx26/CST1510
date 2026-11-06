@@ -1,4 +1,22 @@
-  Srv-01 , used=87 , total=100
+ # %%
+
+ Srv-01 , used=87 , total=100
 SRV-02,used=120,total=100
   srv-03,used=45 ,total=100
 Srv-04 , used = 93 , total=100
+# %%
+
+with open("messy_lines.txt") as f:
+    for line in f:
+        line = line.strip()
+        if line == "" or line.startswith("#"):
+            continue                      
+
+        parts = line.split(",")           
+
+        name = parts[0].strip().upper()                 
+        used = int(parts[1].split("=")[1].strip())     
+        total = int(parts[2].split("=")[1].strip())     
+
+        print(f"{name}: {used}/{total}")
+        
