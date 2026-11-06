@@ -75,12 +75,28 @@ def load_records(path):
 #                record: label, status), as well as printing them.
 
 
-records = []   # replace with your code
+records = load_records("records.txt")
+
+def save_results(path, results):
+    """Write each record's label and status to a file, one per line."""
+    with open(path, "w") as f:
+        for label, status in results:
+            f.write(f"{label},{status}\n")
 
 
 # =============================================================== PROCESS + OUTPUT
 # 3. Loop over records. For each one, call check_record and print_report.
 #
+results = []                                                                     # empty list before the loop starts. It’s where the label and status of each record get collected.
+
+for record in records:                                                           # takes each dictionary from the list in turn 
+
+    difference, percent, status = check_record(record["value"], record["limit"]) # check_record returns three values, which are unpacked into three variables.
+    print_report(record["value"], record["limit"], difference, percent, status)  # pulls the numbers out of that dictionary by their keys
+    results.append((record["label"], status))                                    # remembers the label and status for the file
+
+save_results("results.txt", results)                                             # save_results is not indented, so it runs once, after the loop has finished   
+
 #    Excellent : also keep a running count of how many were OVER LIMIT, and
 #                print that once, after the loop ends.
 
