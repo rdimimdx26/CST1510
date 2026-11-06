@@ -2,12 +2,12 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
+Name  :Rumyana Dimitrova
 Lane  :  AI
-Date  :
+Date  :06.11.2026
 
 Run it:   python template.py
-
+"""
 # =================================================================== FUNCTIONS
 # 1. Bring back check_record(value, limit) and print_report(...) from Week 3
 #    (copy them, or rewrite them - either is fine). check_record returns
@@ -18,12 +18,12 @@ Run it:   python template.py
 # your function(s) go here
 # %%
 def check_record(value, limit):
-    """Checking if value exceeds the limit and returns difference, percent, and status."""
+    
     difference = value - limit
     percent = (value / limit) * 100
     if percent > 100:
         status = "OVER LIMIT"
-    elif percent >= 85:
+    elif percent >= 87.0:
         status = "WARNING"
     else:
         status = "OK"
@@ -31,8 +31,6 @@ def check_record(value, limit):
     return difference, percent, status
 
 def print_report(value, limit, difference, percent, status):
-    """Print a report showing the value, limit, difference and status."""
-
     print(f"Value: {value}")
     print(f"Limit: {limit}")
     print(f"Difference: {difference}")
