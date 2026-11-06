@@ -2,12 +2,12 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
+Name  :Rumyana Dimitrova
 Lane  :  AI
-Date  :
+Date  :06.11.2026
 
 Run it:   python template.py
-
+"""
 # =================================================================== FUNCTIONS
 # 1. Write a function called status_of(percent) that returns "OVER LIMIT"
 #    (100% or more), "WARNING" (90% or more), or "OK" (anything else).

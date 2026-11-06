@@ -18,12 +18,13 @@ Run it:   python template.py
 # your function(s) go here
 # %%
 def check_record(value, limit):
-    
+    """Return the difference, percent and status for a value against its limit."""  
+
     difference = value - limit
     percent = (value / limit) * 100
     if percent > 100:
         status = "OVER LIMIT"
-    elif percent >= 87.0:
+    elif percent >= 90:
         status = "WARNING"
     else:
         status = "OK"
@@ -31,9 +32,10 @@ def check_record(value, limit):
     return difference, percent, status
 
 def print_report(value, limit, difference, percent, status):
+    """Print a report showing the value, limit, difference, percent and status."""    
     print(f"Value: {value}")
     print(f"Limit: {limit}")
-    print(f"Difference: {difference}")
+    print(f"Difference: {difference:.2f}")
     print(f"Percentage: {percent:.1f}%")
     print(f"Status: {status}")
 
