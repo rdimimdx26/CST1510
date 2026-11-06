@@ -67,12 +67,13 @@ def load_records(path):
             label, value, limit = line.split(",")
             records.append ({"label": label.strip(),
                              "value": float(value),
-                             "limit": float(limit),})   # trailing comma, and it’s optional. Python allows a comma after the last item in a dictionary, list or function call, and ignores it.
+                             "limit": float(limit),})   # trailing comma, and it’s optional. Python allows a comma after the last item in a dictionary, list or function call, and ignores it. Adding an item later is easier. exception is a tuple with a single item. There, the comma does matter.
             return records
         records = load_records ("records.txt")
 
 #    Excellent : also write the results out to a new file (one line per
 #                record: label, status), as well as printing them.
+
 
 records = []   # replace with your code
 
