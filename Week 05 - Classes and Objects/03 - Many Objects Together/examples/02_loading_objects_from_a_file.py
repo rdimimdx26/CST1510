@@ -6,7 +6,7 @@ builds a list of Record OBJECTS instead - one Record per line.
 Run:  python 02_loading_objects_from_a_file.py
 (needs sample_records.txt in the same folder)
 """
-
+# %%
 class Record:
     def __init__(self, label, value, limit):
         self.label = label
@@ -81,9 +81,17 @@ class Server:                                         # IT
 servers = [Server("srv-01"), Server("srv-02")]
 print(len(servers), "Server objects loaded")
 
-
+# %%
+import os
+print(os.getcwd())
+print(os.listdir())
+# %%
+import os
+print(os.getcwd())
 # --- TRY IT ------------------------------------------------------------------
 # 1. Add a percent(self) method to Record, then print the highest percent
 #    value across every loaded record.
 # 2. Compare this file to Week 4's load_records - what is the one line that
 #    actually changed?
+
+# %%
