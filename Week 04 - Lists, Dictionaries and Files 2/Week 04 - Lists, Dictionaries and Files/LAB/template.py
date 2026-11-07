@@ -16,7 +16,7 @@ Run it:   python template.py
 #    one-line docstring.
 
 # your function(s) go here
-
+# %%
 def check_record(value, limit):
     """Return the difference, percent and status for a value against its limit."""  
 
@@ -48,7 +48,7 @@ print_report(87, 100, difference, percent, status)   # test
 #        {"label": ..., "value": ..., "limit": ...}
 #
 #    Threshold : write the list directly in the code - at least 3 records.
-
+# %%
 records = [{"label": "Server1", "value": 95, "limit": 100},
            {"label": "Server2", "value": 87, "limit": 100},
            {"label": "Server3", "value": 80, "limit": 100}]
@@ -73,7 +73,7 @@ records = load_records ("records.txt")
 
 #    Excellent : also write the results out to a new file (one line per
 #                record: label, status), as well as printing them.
-
+# %%
 
 records = load_records("records.txt")
 
@@ -86,7 +86,7 @@ def save_results(path, results):
 
 # =============================================================== PROCESS + OUTPUT
 # 3. Loop over records. For each one, call check_record and print_report.
-#
+# %%
 results = []                                                                                      # empty list before the loop starts. It’s where the label and status of each record get collected.It works the same way as over_count = 0
 
 for record in records:                                                                            # takes each dictionary from the list in turn 
@@ -111,9 +111,13 @@ results = []
 over_count = 0  
 
 for record in records:
+
     difference, percent, status = check_record(record["value"], record["limit"])
+
     print_report(record["value"], record["limit"], difference, percent, status)
+
     results.append((record["label"], status))
+
     if status == "OVER LIMIT":
         over_count += 1
 
