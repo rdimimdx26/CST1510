@@ -1,0 +1,3 @@
+Server1,WARNING
+Server2,OK
+Server3,OK

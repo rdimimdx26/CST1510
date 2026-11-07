@@ -56,7 +56,7 @@ records = [{"label": "Server1", "value": 95, "limit": 100},
 #    Typical   : instead, write a function load_records(path) that reads
 #                label,value,limit lines from a file and returns the list.
 #                Make your own data file, one record per line.
-
+# %%
 def load_records(path):
     records = []
     with open (path) as f:
