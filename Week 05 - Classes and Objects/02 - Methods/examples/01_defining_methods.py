@@ -134,6 +134,29 @@ print(r.difference())
 
 # 2. Write a method summary(self) for Record3 that uses self.status() inside it,
 #    returning something like "R-003: WARNING".
+# %%
+class Record3:
+    def __init__(self, label, value, limit):
+        self.label = label
+        self.value = value
+        self.limit = limit
 
+    def percent(self):
+        return (self.value / self.limit) * 100
 
+    def status(self):
+        p = self.percent() 
+        if p >= 100:
+            return "OVER LIMIT"
+        elif p >= 90:
+            return "WARNING"
+        else:
+            return "OK"
+
+    def summary(self):
+        """Return a short summary like 'R-003: WARNING'."""
+        return f"{self.label}: {self.status()}"
+    
+r3 = Record3("R-003", 95.0, 100.0)
+print(r3.summary())    
 # %%
