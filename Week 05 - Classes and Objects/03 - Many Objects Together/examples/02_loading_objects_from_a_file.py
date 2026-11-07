@@ -22,7 +22,7 @@ class Record:
         else:
             return "OK"
 
-
+# %%
 def load_records(path):
     """Read label,value,limit lines from a file and return a list of Records."""
     records = []
@@ -88,10 +88,30 @@ print(os.listdir())
 # %%
 import os
 print(os.getcwd())
+# %%
+print(hasattr(Record, "percent"))
 # --- TRY IT ------------------------------------------------------------------
 # 1. Add a percent(self) method to Record, then print the highest percent
 #    value across every loaded record.
+# %%
+class Record:
+    def __init__(self, label, value, limit):
+        self.label = label
+        self.value = value
+        self.limit = limit
+
+    def percent(self):
+        """Return the value as a percentage of the limit."""
+        return (self.value / self.limit) * 100
+    
+highest = 0
+for r in records:
+    if r.percent() > highest:
+        highest = r.percent()
+print(highest)
+
 # 2. Compare this file to Week 4's load_records - what is the one line that
 #    actually changed?
 
 # %%
+
