@@ -128,7 +128,10 @@ print(f"Records over limit: {over_count}")
 #
 #    [ ] Run it and check every record's numbers are correct by hand
 #    [ ] If you are loading from a file, check what happens when the file
-#        does not exist - write the error down
+#        does not exist - write the error down    
+# FileNotFoundError: [Errno 2] No such file or directory: 'records.txt'
+# I have created a new file records.txt
+
 #    [ ] Check every function still does one job
 
 # %%
