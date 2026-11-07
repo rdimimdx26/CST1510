@@ -28,7 +28,7 @@ print(r.checked)          # True - it actually changed, no return needed
 
 # --- 2. Compare to Week 3's rule - this is genuinely different --------------
 # A plain function cannot do this:
-
+# %%
 def try_to_change(price):
     price = price * 1.2     # only changes the LOCAL copy - lost when the
     return price              # function ends, unless you return and reassign
@@ -42,7 +42,7 @@ print(total)                  # still 100 - Week 3's rule held
 
 
 # --- 3. A running count, kept on the object itself ---------------------
-
+# %%
 class Checker:
     def __init__(self):
         self.over_limit_count = 0
@@ -66,7 +66,29 @@ print(c.over_limit_count)     # 2 - the object remembered, across three calls
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Add a reset(self) method to Checker that sets over_limit_count back to 0.
+# %%
+class Checker:
+    def __init__(self):
+        self.over_limit_count = 0
+
+    def check(self, value, limit):
+            if value > limit:
+                self.over_limit_count += 1 
+
+    def reset(self):
+        """Set the over-limit count back to 0."""
+        self.over_limit_count = 0
+
+c = Checker()
+c.check(120, 100)
+c.check(87, 100)
+c.check(150, 100)
+print(c.over_limit_count)
+
+c.reset()
+print(c.over_limit_count)
+
 # 2. Explain, in one sentence, why try_to_change(total) does not change
 #    total, but r.mark_checked() does change r.
+# The function only changes a local variable, but the method changes the object itself through self.
 
-# %%
