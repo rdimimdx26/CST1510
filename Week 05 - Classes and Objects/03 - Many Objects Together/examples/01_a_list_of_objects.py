@@ -5,7 +5,7 @@ Week 4: a list of dicts. This week: a list of objects - same shape, and now
 each item can also DO something, not just hold data.
 Run:  python 01_a_list_of_objects.py
 """
-
+# %%
 class Record:
     def __init__(self, label, value, limit):
         self.label = label
@@ -57,3 +57,5 @@ for record in records:
 #    the labels of the ones that are OK.
 # 2. Count how many records in your list are OVER LIMIT, using a running
 #    total updated inside the loop.
+
+# %%
