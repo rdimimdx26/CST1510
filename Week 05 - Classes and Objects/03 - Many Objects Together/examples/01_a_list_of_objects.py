@@ -55,7 +55,25 @@ for record in records:
 # --- TRY IT ------------------------------------------------------------------
 # 1. Build a list of 3 Record objects by hand. Loop over it and print only
 #    the labels of the ones that are OK.
+# %%
+records = [
+    Record("R-001", 87.0, 100.0),
+    Record("R-002", 120.0, 100.0),
+    Record("R-003", 45.0, 100.0),
+]
+
+for r in records:
+    if r.status() == "OK":
+        print(r.label)
+
 # 2. Count how many records in your list are OVER LIMIT, using a running
 #    total updated inside the loop.
-
 # %%
+over_count = 0
+
+for r in records:
+    if r.status() == "OVER LIMIT":
+        over_count += 1
+
+print(over_count)
+
