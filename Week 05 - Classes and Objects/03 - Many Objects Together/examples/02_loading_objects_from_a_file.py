@@ -112,6 +112,8 @@ print(highest)
 
 # 2. Compare this file to Week 4's load_records - what is the one line that
 #    actually changed?
+# The only line that changed is the append: Week 4 built a dict
+# ({"label": ..., "value": ..., "limit": ...}), but now it creates a
+# Record object with Record(label, float(value), float(limit)).
 
-# %%
 
