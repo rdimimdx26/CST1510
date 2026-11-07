@@ -6,7 +6,7 @@ Run:  python 01_classes_and_init.py
 """
 
 # --- 1. A class defines the shape ---------------------------------------
-
+# %%
 class Record:
     def __init__(self, label, value, limit):
         self.label = label
@@ -82,3 +82,5 @@ print(s.hostname, s.used, "/", s.total)
 #    value and prove the other is unaffected.
 # 3. Predict, then check: what does print(r1) show, without a label or value -
 #    just Record("R-001", 87.0, 100.0) printed directly?
+
+# %%
