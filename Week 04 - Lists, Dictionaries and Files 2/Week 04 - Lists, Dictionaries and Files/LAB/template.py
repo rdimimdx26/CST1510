@@ -16,7 +16,7 @@ Run it:   python template.py
 #    one-line docstring.
 
 # your function(s) go here
-# %%
+
 def check_record(value, limit):
     """Return the difference, percent and status for a value against its limit."""  
 
@@ -56,7 +56,7 @@ records = [{"label": "Server1", "value": 95, "limit": 100},
 #    Typical   : instead, write a function load_records(path) that reads
 #                label,value,limit lines from a file and returns the list.
 #                Make your own data file, one record per line.
-# %%
+
 def load_records(path):
     records = []
     with open (path) as f:
@@ -68,8 +68,8 @@ def load_records(path):
             records.append ({"label": label.strip(),
                              "value": float(value),
                              "limit": float(limit),})   # trailing comma, and it’s optional. Python allows a comma after the last item in a dictionary, list or function call, and ignores it. Adding an item later is easier. exception is a tuple with a single item. There, the comma does matter.
-            return records
-        records = load_records ("records.txt")
+        return records
+records = load_records ("records.txt")
 
 #    Excellent : also write the results out to a new file (one line per
 #                record: label, status), as well as printing them.
@@ -92,30 +92,33 @@ results = []                                                                    
 for record in records:                                                                            # takes each dictionary from the list in turn 
 
     difference, percent, status = check_record(record["value"], record["limit"])                  # check_record returns three values, which are unpacked into three variables.
-    # record["label"], record["value"] etc. pull each item out of the dictionary by its key                                                                                      
-    print_report(record["label"], record["value"], record["limit"], difference, percent, status)  
+    # record["value"] etc. pull each item out of the dictionary by its key                                                                                      
+    print_report(record["value"], record["limit"], difference, percent, status)  
     results.append((record["label"], status))                                                     # remembers the label and status for the file
 
 save_results("results.txt", results)                                                              # # save_results is not indented, so it runs once, after the loop has finished   
 
                                              
 
-def print_report(label, value, limit, difference, percent, status):
-    """Print a report showing the label, value, limit, difference, percent and status."""
-    print(f"Record: {label}")
-    print(f"Value: {value}")
-    print(f"Limit: {limit}")
-    print(f"Difference: {difference:.2f}")
-    print(f"Percentage: {percent:.1f}%")
-    print(f"Status: {status}")
-    print()
+
 
 #    Excellent : also keep a running count of how many were OVER LIMIT, and
 #                print that once, after the loop ends.
 
-# your loop goes here
+# 
+# %%
+results = []
+over_count = 0  
 
+for record in records:
+    difference, percent, status = check_record(record["value"], record["limit"])
+    print_report(record["value"], record["limit"], difference, percent, status)
+    results.append((record["label"], status))
+    if status == "OVER LIMIT":
+        over_count += 1
 
+save_results("results.txt", results)
+print(f"Records over limit: {over_count}")
 # ==========================================================================
 # 4. Before you finish:
 #
