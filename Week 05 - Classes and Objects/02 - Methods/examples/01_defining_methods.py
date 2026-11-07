@@ -106,5 +106,34 @@ print(Server("srv-01", 87, 120).check_disk())
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Add a method difference(self) to Record3 that returns self.value - self.limit.
+# %% 
+class Record3:
+    def __init__(self, label, value, limit):
+        self.label = label
+        self.value = value
+        self.limit = limit
+
+    def percent(self):
+        return (self.value / self.limit) * 100
+
+    def status(self):
+        p = self.percent() 
+        if p >= 100:
+            return "OVER LIMIT"
+        elif p >= 90:
+            return "WARNING"
+        else:
+            return "OK"
+
+    def difference(self):
+        """Return how far the value is above or below the limit."""
+        return self.value - self.limit
+
+r = Record3("R-001", 87.0, 100.0)
+print(r.difference())   
+
 # 2. Write a method summary(self) for Record3 that uses self.status() inside it,
 #    returning something like "R-003: WARNING".
+
+
+# %%
