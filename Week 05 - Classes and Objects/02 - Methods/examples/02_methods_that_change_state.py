@@ -8,7 +8,7 @@ Run:  python 02_methods_that_change_state.py
 """
 
 # --- 1. A method can update self's attributes, and it sticks -----------
-
+# %%
 class Record:
     def __init__(self, label, value, limit):
         self.label = label
@@ -68,3 +68,5 @@ print(c.over_limit_count)     # 2 - the object remembered, across three calls
 # 1. Add a reset(self) method to Checker that sets over_limit_count back to 0.
 # 2. Explain, in one sentence, why try_to_change(total) does not change
 #    total, but r.mark_checked() does change r.
+
+# %%
