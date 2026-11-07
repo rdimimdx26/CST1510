@@ -2,9 +2,9 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :Rumyana Dimitrova
+Name  : Rumyana Dimitrova
 Lane  :  AI
-Date  :06.11.2026
+Date  : 10.10.2026
 
 Run it:   python template.py
 """
