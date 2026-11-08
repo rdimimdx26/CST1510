@@ -134,14 +134,54 @@ for record in records:
 
 #    Typical   : add the result of .status().
 
+# %%
+for record in records:
+    status = record.status()
+
+    print()
+    print("=" * 34)
+    print(f"  RECORD CHECK  -  {record.label}")
+    print("=" * 34)
+    print(f"| Label:  {record.label}")
+    print(f"| Value:  {record.value}")
+    print(f"| Limit:  {record.limit}")
+    print(f"| Status: {status}")
+    print("=" * 34)
+
 #    Excellent : also keep a running count of how many came back OVER LIMIT
 #                across every record, and print that once, after the loop.
 #                (Simplest: a plain variable outside the loop, same pattern
 #                as Week 4. If you want it to live ON the object instead,
 #                that is a stretch worth trying - but a variable is enough.)
 # %%
+over_count = 0
+
+for record in records:
+    status = record.status()
+
+    print()
+    print("=" * 34)
+    print(f"  RECORD CHECK  -  {record.label}")
+    print("=" * 34)
+    print(f"| Label:  {record.label}")
+    print(f"| Value:  {record.value}")
+    print(f"| Limit:  {record.limit}")
+    print(f"| Status: {status}")
+    print("=" * 34)
+
+    if status == "OVER LIMIT":
+        over_count += 1
+
+print()
+print(f"Records over limit: {over_count}")
+print(f"Records over limit (variable): {over_count}")
+print(f"Records over limit (class):    {Record.over_limit_count}")
+# %%
 class Record:
+    over_limit_count = 0
+
     def __init__(self, label, value, limit):
+        """Store the record's label, value and limit."""
         self.label = label
         self.value = value
         self.limit = limit
@@ -154,10 +194,7 @@ class Record:
         elif percent >= 90:
             return "WARNING"
         else:
-            return "OK"
-
-        
-
+            return "OK"   
 
 def load_records(path):
     """Read label,value,limit lines from a file and return a list of Record objects."""
@@ -173,7 +210,6 @@ def load_records(path):
 
 
 records = load_records("records.txt")
-over_count = 0
 
 for record in records:
     status = record.status()
@@ -189,8 +225,8 @@ for record in records:
     if status == "OVER LIMIT":
         over_count += 1
 
-print(f"Records over limit: {over_count}")
-
+print(f"Records over limit (variable): {over_count}")
+print(f"Records over limit (class):    {Record.over_limit_count}")
 # %%
 import os
 print(os.getcwd())
