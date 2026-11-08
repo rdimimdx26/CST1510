@@ -117,13 +117,23 @@ def load_records(path):
 
 records = load_records("records.txt")
 
-
-
 # ==================================================================== OUTPUT
 # 3. Print a report for each record.
 #
 #    Threshold : label, value, limit, inside a border.
+# %%
+for record in records:
+    print()
+    print("=" * 34)
+    print(f"  RECORD CHECK  -  {record.label}")
+    print("=" * 34)
+    print(f"| Label:  {record.label}")
+    print(f"| Value:  {record.value}")
+    print(f"| Limit:  {record.limit}")
+    print("=" * 34)
+
 #    Typical   : add the result of .status().
+
 #    Excellent : also keep a running count of how many came back OVER LIMIT
 #                across every record, and print that once, after the loop.
 #                (Simplest: a plain variable outside the loop, same pattern
