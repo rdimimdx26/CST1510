@@ -28,7 +28,7 @@ You could make a second RecordChecker, for a different file or a different
 warning threshold, and it would keep its own records and its own count -
 completely separately from the first one.
 """
-
+# %%
 class RecordChecker:
     """Loads records from a file and checks each one against its limit."""
 
@@ -90,3 +90,5 @@ class RecordChecker:
 
 checker = RecordChecker("records.txt")
 checker.run()
+
+# %%
