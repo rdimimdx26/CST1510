@@ -2,14 +2,12 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  : Rumyana Dimitrova
+Lane  :  AI
+Date  : 08.11.2026
 
 Run it:   python template.py
 
-Work through the numbered sections in order. Each one tells you what it must do.
-Delete these instructions as you replace them with your code.
 """
 
 import pandas as pd
@@ -49,3 +47,8 @@ print(df)
 #    [ ] Run it and check the percent/status columns by hand for one row
 #    [ ] Check you used & (not "and") if you combined more than one condition
 #    [ ] Check every column your code refers to actually exists - watch case
+
+
+# %% 
+# Exercise:
+
