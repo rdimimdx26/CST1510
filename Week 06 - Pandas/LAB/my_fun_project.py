@@ -1,5 +1,4 @@
 # %%
-
 import turtle
 
 t = turtle.Turtle()
@@ -66,3 +65,4 @@ t.goto(0, -160)
 t.write("Raya", align="center", font=("Arial", 20, "bold"))
 
 turtle.done()        
+# %%
