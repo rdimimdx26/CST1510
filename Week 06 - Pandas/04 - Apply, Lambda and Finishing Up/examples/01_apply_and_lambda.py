@@ -5,7 +5,7 @@ A lambda is a def you don't bother naming, for a one-line function you are
 only going to use once - usually right inside .apply().
 Run:  python 01_apply_and_lambda.py
 """
-
+# %%
 import pandas as pd
 
 servers = pd.read_csv("servers.csv")
@@ -75,3 +75,5 @@ print(hosts_df.sort_values("hostname", key=lambda c: c.str.lower()))  # IT
 #    region column, in capitals.
 # 3. Explain, in one sentence, when you would reach for classify() (a def)
 #    instead of a lambda.
+
+# %%
