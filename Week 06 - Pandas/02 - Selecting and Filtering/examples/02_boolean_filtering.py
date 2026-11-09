@@ -5,7 +5,7 @@ This replaces every if statement you have written inside a loop since
 Week 2 - one line, no loop.
 Run:  python 02_boolean_filtering.py
 """
-
+# %%
 import pandas as pd
 
 servers = pd.read_csv("servers.csv")
@@ -59,3 +59,5 @@ print(disk_df[disk_df["used_pct"] >= 90])                           # IT
 #    around each comparison.
 # 3. Predict, then check: what does servers[servers["region"] == "south"]
 #    give you, given there is no "south" in the data?
+
+# %%

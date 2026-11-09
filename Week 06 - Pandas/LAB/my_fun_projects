@@ -1,0 +1,68 @@
+# %%
+
+import turtle
+
+t = turtle.Turtle()
+t.speed(0)              # fastest drawing
+t.hideturtle()
+turtle.bgcolor("white")
+
+
+def circle_at(x, y, r, fill):
+    """Draw a filled circle centred at (x, y) with radius r."""
+    t.penup()
+    t.goto(x, y - r)
+    t.pendown()
+    t.color("black", fill)
+    t.begin_fill()
+    t.circle(r)
+    t.end_fill()
+
+
+def triangle(points, fill):
+    """Draw a filled triangle through three (x, y) points."""
+    t.penup()
+    t.goto(points[0])
+    t.pendown()
+    t.color("black", fill)
+    t.begin_fill()
+    for p in points[1:] + [points[0]]:
+        t.goto(p)
+    t.end_fill()
+
+
+fur = "#D2A26B"         # change to Raya's fur colour
+light = "#F1D3A8"
+pink = "#F4B6C2"
+
+# Ears (drawn first, so the head covers their base)
+triangle([(-90, 40), (-150, 170), (-30, 90)], fur)
+triangle([(90, 40), (150, 170), (30, 90)], fur)
+triangle([(-85, 70), (-130, 145), (-50, 95)], pink)
+triangle([(85, 70), (130, 145), (50, 95)], pink)
+
+# Head and muzzle
+circle_at(0, 0, 100, fur)
+circle_at(0, -45, 45, light)
+
+# Eyes, with little white highlights
+circle_at(-40, 20, 14, "black")
+circle_at(40, 20, 14, "black")
+circle_at(-35, 26, 4, "white")
+circle_at(45, 26, 4, "white")
+
+# Nose
+circle_at(0, -25, 12, "black")
+
+# Mouth
+t.color("black")
+t.penup(); t.goto(0, -37); t.pendown(); t.goto(0, -55)
+t.goto(-15, -65)
+t.penup(); t.goto(0, -55); t.pendown(); t.goto(15, -65)
+
+# Name
+t.penup()
+t.goto(0, -160)
+t.write("Raya", align="center", font=("Arial", 20, "bold"))
+
+turtle.done()        
