@@ -71,9 +71,20 @@ print(hosts_df.sort_values("hostname", key=lambda c: c.str.lower()))  # IT
 # --- TRY IT ------------------------------------------------------------------
 # 1. Write classify as a lambda with a chained conditional, and check it
 #    gives the same result as the def version for every row.
+# %%
+classify_lambda = lambda p: "OVER LIMIT" if p >= 100 else "WARNING" if p >= 90 else "OK"
+servers["status_lambda"] = servers["percent"].apply(classify_lambda)
+print(servers[["percent", "status_lambda"]])
+
 # 2. Use .apply() with a lambda to create a column "region_upper" - the
 #    region column, in capitals.
+# %%
+servers["region_upper"] = servers["region"].apply(lambda r: r.upper())
+print(servers[["region", "region_upper"]])
+
 # 3. Explain, in one sentence, when you would reach for classify() (a def)
 #    instead of a lambda.
+# Lambda - When we have short one off rules
+# def, when logic is too long and we need to reuse the function elsewhere
 
 # %%
