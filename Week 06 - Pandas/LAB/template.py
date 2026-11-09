@@ -30,20 +30,49 @@ print(df)
 #
 #    Typical and above: also add a "status" column using .apply() with a
 #    lambda - "OVER LIMIT" (100%+), "WARNING" (90%+), otherwise "OK".
+# %%
+import pandas as pd
 
-# your column(s) go here
+df = pd.read_csv("records.csv")
+df["percent"] = (df["value"] / df["limit"]) * 100
+
+df["status"] = df["percent"].apply(
+    lambda p: "OVER LIMIT" if p >= 100 else "WARNING" if p >= 90 else "OK"
+)
+print(df)
 
 
 # ================================================================== OUTPUT
 # 3. Print the DataFrame.
 #
 #    Threshold : print it as-is, with the percent column.
+# %%
+print(df)
+
 #    Typical   : also filter to show only the rows that are not "OK", using a
 #                boolean condition in [] - not a loop.
+
+# %%
+not_ok = df[df["status"] != "OK"]
+print(not_ok)
+
 #    Excellent : also group by "status" and print a count per group, save
 #                the full DataFrame to a new CSV with .to_csv(), and save
 #                one bar chart of the counts per status.
+# %%
+import matplotlib.pyplot as plt
 
+counts = df.groupby("status")["label"].count()
+print(counts)
+
+df.to_csv("records_report.csv", index=False)
+
+counts.plot(kind="bar", color = "#B14CE8", title="Records per status")
+plt.xlabel("Status")
+plt.ylabel("Number of records")
+plt.tight_layout()
+plt.savefig("status_counts.png")
+plt.show()
 print(df)
 
 
