@@ -3,7 +3,7 @@ SORTING
 ========
 Ordering rows by one or more columns.   Run:  python 02_sorting.py
 """
-
+# %%
 import pandas as pd
 
 servers = pd.read_csv("servers.csv")
@@ -35,7 +35,22 @@ print(sorted_servers)
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Sort servers by "used", largest first.
+# %%
+print(servers.sort_values("used", ascending=False))
+
 # 2. Sort by "region", then by "used" within each region, smallest first.
+# %%
+print(servers.sort_values(["region", "used"]))
+
 # 3. Find the single highest-percent row using sort_values and .iloc[0] -
 #    or look up whether pandas has a more direct way to ask "which row is
 #    the maximum".
+# %%
+top = servers.sort_values("percent", ascending=False).iloc[0]
+print(top)
+# or 
+# %%
+top = servers.loc[servers["percent"].idxmax()] # .idxmax() gives the index label of the row with the highest percent.
+print(top)                                     
+
+# %%
