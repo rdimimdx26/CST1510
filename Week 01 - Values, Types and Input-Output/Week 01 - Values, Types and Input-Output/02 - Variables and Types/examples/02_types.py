@@ -70,5 +70,23 @@ print(type(answer))           # <class 'str'>
 
 # --- TRY IT ----------------------------------------------------------------
 # 1. Print the type of:  "5"   5   5.0   "5.0"
+# %%
+print(type("5"))
+print(type(5))
+print(type(5.0))
+print(type("5.0"))
+
 # 2. Predict, then check:  "3" + "4"   and   3 + 4
+# %%
+print("3" + "4") # "34", as str. joints them together
+print(3 + 4)     # 7, adds them
+
 # 3. Add the line  print("20" + 20)  - read the error, then fix it two ways.
+
+# %%
+print("20" + 20) # Python produces TypeError: can only concatenate str (not "int") to str
+# %%
+print(int("20") + 20)
+# %%
+print("20" + str(20)) # turns the number into a text/str. and joins them together
+# %%
