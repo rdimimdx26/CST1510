@@ -87,6 +87,18 @@ print(f"{hostname:<12} disk {used:>3} %")                         # IT
 
 # --- TRY IT ----------------------------------------------------------------
 # 1. Print 7 / 3 to exactly three decimal places.
+# %%
+print(round(7 / 3, 3))
+
 # 2. Print your name left-aligned in 15 characters, then a number right-
 #    aligned in 8. Do it for three different names and check they line up.
+# %%
+print(f"{'Rumyana':<15}{87:>8}")
+print(f"{'Anna':<15}{120:>8}")
+print(f"{'Tom':<15}{5:>8}")
 # 3. Remove the f from one line above. Run it. Put it back.
+# %%
+print("{'Rumyana':<15}{87:>8}") # Python prints text. Without f is just a str. and no error pops up.
+# %% 
+print(f"{'Rumyana':<15}{87:>8}")
+# %%
