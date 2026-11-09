@@ -56,5 +56,9 @@ plt.savefig("servers_per_region.png", bbox_inches="tight")
 plt.show()
 
 # 3. Save a second CSV containing only the OVER LIMIT rows.
+# %%
+over = servers[servers["status"] == "OVER LIMIT"]
+over.to_csv("over_limit.csv", index=False)
+print(over)
 
 # %%
