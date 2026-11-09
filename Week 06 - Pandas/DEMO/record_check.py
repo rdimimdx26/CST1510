@@ -17,7 +17,7 @@ with pandas instead of your own loop and your own class.
 
 One line uses an idea from Topic 4 (a lambda) and is marked.
 """
-
+# %%
 import pandas as pd
 
 df = pd.read_csv("records.csv")
@@ -37,3 +37,5 @@ print(df["status"].value_counts())
 
 df.to_csv("report.csv", index=False)
 print("\nSaved report.csv")
+
+# %%
