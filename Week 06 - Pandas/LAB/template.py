@@ -9,7 +9,7 @@ Date  : 08.11.2026
 Run it:   python template.py
 
 """
-
+# %%
 import pandas as pd
 
 # ==================================================================== LOAD
@@ -18,6 +18,11 @@ import pandas as pd
 #    names - same shape, different words).
 
 df = None   # replace with pd.read_csv("your_file.csv")
+# %%
+import pandas as pd
+
+df = pd.read_csv("records.csv")
+print(df)
 
 
 # ================================================================= PROCESS
