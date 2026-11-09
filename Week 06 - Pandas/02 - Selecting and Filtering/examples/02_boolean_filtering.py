@@ -66,6 +66,10 @@ busy = servers[(servers["percent"] >= 90) & (servers["percent"] <= 100)]
 print(busy)
 
 # 3. Predict, then check: what does servers[servers["region"] == "south"]
-#    give you, given there is no "south" in the data?
+#    give you, given there is no "south" in the data? 
+# Empty DataFrame
+# %%
+south = servers[servers["region"] == "south"]
+print(south)
 
 # %%
