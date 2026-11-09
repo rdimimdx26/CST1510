@@ -4,7 +4,7 @@ loc AND iloc
 Selecting rows and columns by label, or by position.
 Run:  python 01_loc_and_iloc.py
 """
-
+# %%
 import pandas as pd
 
 servers = pd.read_csv("servers.csv")
@@ -40,3 +40,5 @@ print(by_hostname.loc["srv-03"])     # now loc looks up by hostname, not positio
 # 1. Print rows 2 to 4 (inclusive) using iloc.
 # 2. Print just the "region" and "used" columns, for every row.
 # 3. Set the index to "hostname" and use loc to look up "srv-07" directly.
+
+# %%
