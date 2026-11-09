@@ -84,7 +84,7 @@ print(servers[["region", "region_upper"]])
 
 # 3. Explain, in one sentence, when you would reach for classify() (a def)
 #    instead of a lambda.
-# Lambda - When we have short one off rules
+# lambda - when we have short, one off rules
 # def, when logic is too long and we need to reuse the function elsewhere
 
 # %%
