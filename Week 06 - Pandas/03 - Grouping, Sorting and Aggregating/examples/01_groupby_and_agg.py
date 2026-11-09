@@ -4,7 +4,7 @@ GROUPBY AND AGGREGATING
 Answering "one number per group" questions without writing the loop yourself.
 Run:  python 01_groupby_and_agg.py
 """
-
+# %%
 import pandas as pd
 
 servers = pd.read_csv("servers.csv")
@@ -24,7 +24,7 @@ print(grouped.size())                  # how many rows in each group
 
 
 # --- 3. .agg() - more than one summary at once -----------------------------
-
+# %%
 print(grouped["percent"].agg(["mean", "max", "min"]))
 
 
@@ -35,7 +35,7 @@ print(servers["region"].value_counts())
 
 
 # --- 5. Same idea, three fields ---------------------------------------------
-
+# %%
 scores = pd.DataFrame({"class": ["A", "A", "B"], "score": [80, 90, 70]})
 print(scores.groupby("class")["score"].mean())                       # AI / Data Science
 
@@ -48,7 +48,17 @@ print(disks.groupby("region")["used_pct"].mean())                    # IT
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Group by "region" and print the total "used" per region.
+# %%
+print(servers.groupby("region")["used"].sum())
+
 # 2. Use .agg() to get both the mean and the count of "percent" per region,
 #    in one call.
+# %%
+print(servers.groupby("region")["percent"].agg(["mean", "count"]))
+
 # 3. Predict, then check: does value_counts() sort the results, and in
 #    which order?
+# yes it does. value_counts() sorts the results by count, from highest to lowest, so the most common value comes first.
+# %%
+print(servers["region"].value_counts())
+# %%
