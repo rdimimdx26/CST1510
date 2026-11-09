@@ -55,6 +55,10 @@ print(disk_df[disk_df["used_pct"] >= 90])                           # IT
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Filter servers to just the rows where region is "west".
+# %%
+west = servers[servers["region"] == "west"]
+print(west)
+
 # 2. Filter to rows where percent is between 90 and 100, using & and brackets
 #    around each comparison.
 # 3. Predict, then check: what does servers[servers["region"] == "south"]
