@@ -98,7 +98,7 @@ print(f"{'Anna':<15}{120:>8}")
 print(f"{'Tom':<15}{5:>8}")
 # 3. Remove the f from one line above. Run it. Put it back.
 # %%
-print("{'Rumyana':<15}{87:>8}") # Python prints text. Without f is just a str. and no error pops up.
+print("{'Rumyana':<15}{87:>8}") # Python prints text. Without f it is just a str. and no error pops up.
 # %% 
 print(f"{'Rumyana':<15}{87:>8}")
 # %%
