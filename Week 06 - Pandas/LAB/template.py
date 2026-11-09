@@ -79,10 +79,12 @@ print(df)
 # ==========================================================================
 # 4. Before you finish:
 #    [ ] Run it and check the percent/status columns by hand for one row
+# percent = 95 ÷ 100 × 100 = 95.0
+# Yes, checked : 95 is not ≥ 100, but it is ≥ 90, so the status is WARNING
 #    [ ] Check you used & (not "and") if you combined more than one condition
+# Yes, I did. 
 #    [ ] Check every column your code refers to actually exists - watch case
+# %%
+print(df.columns)
 
-
-# %% 
-# Exercise:
 
