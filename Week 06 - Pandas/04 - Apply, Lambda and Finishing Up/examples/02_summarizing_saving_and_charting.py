@@ -5,7 +5,7 @@ Finishing the job: a quick overview, writing the result out, and a first look
 at plotting straight from a DataFrame.
 Run:  python 02_summarizing_saving_and_charting.py
 """
-
+# %%
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -16,7 +16,7 @@ servers["status"] = servers["percent"].apply(
 )
 
 # --- 1. describe() - a quick statistical overview of the numeric columns ---
-
+# %%
 print(servers.describe())
 
 
@@ -43,5 +43,18 @@ print("saved status_counts.png")
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Use describe() on just the "percent" column on its own.
+# %%
+print(servers["percent"].describe())
 # 2. Make a bar chart of servers per region instead of per status.
+# %%
+import matplotlib.pyplot as plt
+
+servers["region"].value_counts().plot(kind="bar", color = "red", title="Servers per region")
+plt.xlabel("Region")
+plt.ylabel("Number of servers")
+plt.savefig("servers_per_region.png", bbox_inches="tight")
+plt.show()
+
 # 3. Save a second CSV containing only the OVER LIMIT rows.
+
+# %%
