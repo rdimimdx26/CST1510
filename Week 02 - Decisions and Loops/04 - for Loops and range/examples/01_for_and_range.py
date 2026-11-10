@@ -79,5 +79,18 @@ for host in servers:
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Print "Record 1" through "Record 5" (not 0 through 4).
+# %%
+for n in range(1, 6):
+    print("Record", n)
+
 # 2. Print every multiple of 5 from 5 to 50.
+# %%
+for n in range(5, 51, 5):
+    print(n)
+
 # 3. Print the numbers 20 down to 0, counting by 4s.
+# %%
+for n in range(20, -1, -4):
+    print(n)
+
+
