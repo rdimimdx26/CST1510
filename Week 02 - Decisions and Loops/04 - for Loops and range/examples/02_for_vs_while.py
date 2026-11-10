@@ -6,7 +6,7 @@ Same job, two tools. Picking the right one.   Run:  python 02_for_vs_while.py
 
 # --- 1. Know the count in advance -> for -------------------------------
 # Checking exactly 3 records, whatever the values turn out to be.
-
+# %%
 for i in range(3):
     label = input("Record ID: ")
     value = float(input("Value: "))
@@ -41,7 +41,7 @@ while True:
 
 # --- 4. for can still stop early with break ---------------------------------
 # Even with a known count, you can leave before it finishes.
-
+# %%
 for i in range(10):
     value = float(input("Value (or -1 to stop early): "))
     if value == -1:
