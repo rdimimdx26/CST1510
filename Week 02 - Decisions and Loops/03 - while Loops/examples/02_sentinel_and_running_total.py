@@ -59,13 +59,13 @@ while n < 5:
 
 # --- 5. Same idea, three fields ---------------------------------------------
 # Same shape - keep going until a signal says stop - three domains.
-
+# %%
 batches = [50, 50, 50, 0]                 # AI / Data Science - 0 means no more data
 i = 0
 while batches[i] > 0:
     print("processing batch of", batches[i], "rows")
     i += 1
-
+# %%
 log_lines = ["ok", "ok", "FAIL", "END"]   # Cyber Security - stop at a sentinel line
 i = 0
 while log_lines[i] != "END":
