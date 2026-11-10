@@ -5,7 +5,7 @@ Normalizing text so comparisons actually work.   Run:  python 01_case_methods.py
 """
 
 # --- 1. The problem case creates ---------------------------------------
-
+# %%
 hostname_a = "SRV-01"
 hostname_b = "srv-01"
 
@@ -37,5 +37,14 @@ print(lowered)       # srv-01
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Given ids = ["R-001", "r-002", "R-003"], print all three in lowercase.
+# %%
+ids = ["R-001", "r-002", "R-003"]
+print([i.lower() for i in ids]) # comprehension list 
+
 # 2. Predict, then check: does "Hello".lower() == "hello".lower() give True?
+# Yes it does. 
+# %%
+print("Hello".lower() == "hello".lower()) 
 # 3. Explain why original was unchanged in section 4.
+# The result was not saved.
+# %%
