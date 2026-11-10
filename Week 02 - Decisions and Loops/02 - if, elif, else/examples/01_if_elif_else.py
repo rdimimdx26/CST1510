@@ -69,6 +69,35 @@ if disk_used_pct >= 90:
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Fix section 4 by swapping the order of the two conditions.
+# %%
+percent = 105.0
+
+if percent >= 100:
+    status = "OVER LIMIT"
+elif percent >= 90:
+    status = "WARNING"
+
+print(status)
 # 2. Given attempts = 3 and max_attempts = 3, print "LOCKED" if attempts is at
 #    or over the max, otherwise "OK".
+# %%
+attempts = 3
+max_attempts = 3
+
+if attempts >= max_attempts:
+    print("LOCKED")
+else:
+    print("OK")
 # 3. Add a WARNING branch that fires when attempts is exactly one below the max.
+# %%
+attempts = 3
+max_attempts = 3
+
+if attempts >= max_attempts:
+    print("LOCKED")
+elif attempts == max_attempts - 1:
+    print("WARNING")
+else:
+    print("OK")
+
+# %%
