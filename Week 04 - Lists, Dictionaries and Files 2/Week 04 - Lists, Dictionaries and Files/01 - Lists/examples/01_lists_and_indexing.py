@@ -73,5 +73,24 @@ print(due_tonight[0], "is first on the list")
 # --- TRY IT ------------------------------------------------------------------
 # 1. Create a list of your own with 4 values. Print the first and the last
 #    using indexing.
+# %%
+values = [87, 120, 45, 93]
+
+print(values[0])
+print(values[-1])
+
 # 2. Predict, then check: what does labels[-1] give you if labels has 1 item?
+# it gives that one item. If a list has only one item, the first item is the last item.
+# %%
+labels = ["R-001"]
+print(labels[-1])
+print(labels[0])
 # 3. Trigger an IndexError on purpose, read it, then fix it.
+# %%
+labels = ["R-001", "R-002", "R-003"]
+print(labels[3])
+
+# %% 
+labels = ["R-001", "R-002", "R-003"]
+print(labels[-1]) # fixed
+# %%
