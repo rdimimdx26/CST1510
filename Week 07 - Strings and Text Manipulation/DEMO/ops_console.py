@@ -21,7 +21,7 @@ lines look like they came from an actual monitoring tool - inconsistent
 spacing, inconsistent case, key=value pairs. This version turns them into the
 same clean shape Weeks 4 and 5 already know how to work with.
 """
-
+# %%
 def parse_line(raw_line):
     """Turn one messy raw status line into a clean dict."""
     line = raw_line.strip()
@@ -66,3 +66,5 @@ for raw_line in raw_lines:
     status = status_of(record["used"], record["total"])
     usage = f"{record['used']:.1f}/{record['total']:.1f}"
     print(f"{record['hostname']:<8} {usage:<14} {status}")
+
+# %%
