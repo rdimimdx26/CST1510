@@ -60,6 +60,7 @@ def status_of(rating, low_at=2):
 #    and case. Match the shape to your lane:
 #
 #    AI / Data Science : "  Survey_2026 , rating=4 , age=23  "
+
 # %%
 with open("messy_records.txt") as f:
     for record in f:
@@ -74,28 +75,54 @@ with open("messy_records.txt") as f:
         age = int(parts[2].split("=")[1].strip()) 
 
 
-print(f"records{name}: {rating}/{age}")
+        print(f"records{name}: {rating}/{age}")
 
 
 #
 #    Excellent: save these lines to a file and load them with open() /
 #    a for loop over the file, instead of writing them directly here.
+# %%
+raw_records = []   
 
-raw_records = []   # replace with your code
+with open("messy_records.txt") as f:
+    for line in f:
+        line = line.strip()
+        if line == "" or line.startswith("#"):
+            continue
+        raw_records.append(line)
 
+print(raw_records)
 
 # =============================================================== PROCESS + OUTPUT
 # 3. Parse and report on every record.
 #
 #    Threshold : parse each record, print the cleaned dict.
+# %%
+for raw in raw_records:
+    record = parse_line(raw)
+    print(record)
 
 #    Typical   : also call status_of(...) for each, print it alongside.
+# %%
+for raw in raw_records:
+    record = parse_line(raw)
+    print(record, status_of(record["rating"]))
+
 #    Excellent : print a one-line summary at the end - how many records,
 #                how many flagged.
 
-for raw_record in raw_records:
-    pass   # replace with your code
+# %%
+flagged_count = 0
 
+for raw in raw_records:
+    record = parse_line(raw)
+    status = status_of(record["rating"])
+    print(record, status)
+
+    if status == "FLAGGED":
+        flagged_count += 1
+
+print(f"{len(raw_records)} records, {flagged_count} flagged")
 
 # ==========================================================================
 # 4. Before you finish:
