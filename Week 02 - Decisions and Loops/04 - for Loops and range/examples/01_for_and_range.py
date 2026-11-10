@@ -6,7 +6,7 @@ Repeat a known number of times.   Run:  python 01_for_and_range.py
 
 # --- 1. for i in range(n) -----------------------------------------------
 # Repeats exactly n times. i takes 0, 1, 2, ... up to (but not including) n.
-
+# %%
 for i in range(5):
     print(i)          # 0 1 2 3 4  - five lines, starts at 0
 
