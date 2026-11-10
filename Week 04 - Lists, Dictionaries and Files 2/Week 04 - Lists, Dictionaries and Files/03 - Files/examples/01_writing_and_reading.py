@@ -73,5 +73,5 @@ with open("my_notes.txt") as f:
 
 # 3. Predict, then check: what happens if you open a file with "w" that
 #    already has content in it?
-
+# it will create a file, w stands for write.
 # %%
