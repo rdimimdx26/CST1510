@@ -69,6 +69,9 @@ filenames = ["server.log", "report.csv", "update.log", "file.txt", "access.log"]
 for name in filenames:
     if name.endswith(".log"):
         print(name)
-# 3. Count how many times "failed" appears in a log string of your choosing.
+# 3. 
+# %%
 
+log = "FAILED login. Retry failed. Disk check OK. Backup Failed."
+print(log.lower().count("failed"))
 # %%
