@@ -62,6 +62,21 @@ print(disk_used_pct >= 90)                 # IT - is storage nearly full?
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Write one line that checks whether percent is between 90 and 100 inclusive.
+# %%
+percent = 95
+print(90 <= percent <= 100)
+
 # 2. Set locked = False and attempts = 5. Print True if the account should be
 #    locked because EITHER locked is already True OR attempts is 3 or more.
-# 3. Predict, then check: not (3 > 2)
+# %%
+locked = False
+attempts = 5
+
+print(locked or attempts >= 3)
+
+# 3. Predict, then check: not (3 > 2) 
+# False.
+# 3 > 2 is True
+# not flips it, so not True gives False
+
+# %%
