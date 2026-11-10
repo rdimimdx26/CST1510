@@ -6,7 +6,7 @@ Run:  python 01_in_and_find.py
 """
 
 # --- 1. `in` - does this substring appear? ------------------------------
-
+# %%
 line = "2026-09-08 ERROR failed to connect to srv-01"
 
 print("ERROR" in line)      # True
@@ -41,5 +41,18 @@ if position != -1:
 # --- TRY IT ------------------------------------------------------------------
 # 1. Given log = "2026-09-08 WARNING disk 90% full", check whether it
 #    contains "WARNING", case-insensitively.
+# %%
+log = "2026-09-08 WARNING disk 90% full"
+print("warning" in log.lower())
+
 # 2. Use .find() to locate where "disk" starts in that same string.
+# %%
+log = "2026-09-08 WARNING disk 90% full"
+print(log.find("disk"))
+
 # 3. Predict, then check: what does "".find("x") give you?
+# empty string contains no characters, so "x"
+# It gives: -1.is not found. .find() returns -1 for "not found" instead of raising an error
+# %%
+print("".find("x"))
+# %%
