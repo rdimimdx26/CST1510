@@ -55,6 +55,8 @@ record = ("R-001", 87.0, 100.0)
 print(record)
 
 record[1] = 95.0
+# TypeError: 'tuple' object does not support item assignment -
+# tuples are immutable, so their items can't be changed once created.
 
 # 2. Predict, then check: what does list((1, 2, 3)) give you? What about
 #    tuple([1, 2, 3])?
