@@ -48,7 +48,29 @@ print("R-999" in labels)     # False
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Given values = [5, 10, 15, 20, 25], slice out just the middle three.
+# %%
+values = [5, 10, 15, 20, 25]
+print(values[1:4])
+
 # 2. Append a value to a list, then remove a different one. Print the result
 #    after each step.
+# %%
+values = [87, 120, 45]
+print(values)
+
+values.append(93)
+print(values)
+
+values.remove(120)
+print(values)
+
 # 3. Predict, then check: what happens if you remove() a value that appears
 #    twice in the list?
+# only the first one is removed. The second one stays.
+# %%
+values = [87, 45, 87, 93]
+values.remove(87)
+print(values)
+
+
+# %%
