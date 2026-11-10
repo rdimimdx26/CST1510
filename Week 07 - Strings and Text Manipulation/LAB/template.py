@@ -22,7 +22,7 @@ def parse_line(raw_line):
     result = {}
     for piece in raw_line.split(","):
         if "=" not in piece:
-            result["label"] = piece.strip().lower()
+            result["Survey"] = piece.strip().lower()
         else:
             key, value = piece.split("=")
             result[key.strip().lower()] = float(value.strip())
