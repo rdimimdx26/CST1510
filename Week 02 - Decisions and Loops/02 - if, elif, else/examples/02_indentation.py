@@ -6,7 +6,7 @@ Run:  python 02_indentation.py
 """
 
 # --- 1. The indented lines belong to the if ----------------------------
-
+# %%
 value = 23.7
 limit = 20
 
