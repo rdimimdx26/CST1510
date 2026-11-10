@@ -84,7 +84,7 @@ print("server is healthy")
 # --- TRY IT ------------------------------------------------------------------
 # 1. Adapt section 2 so it also counts how many numbers were entered.
 # %%
-otal = 0
+total = 0
 count = 0
 
 while True:
