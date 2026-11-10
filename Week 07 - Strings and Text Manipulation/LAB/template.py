@@ -33,7 +33,7 @@ def parse_line(raw_line):
 #    Typical and above: also write status_of(...), shaped for your lane
 #    (e.g. OVER LIMIT / WARNING / OK, or FLAGGED / OK). Give both a
 #    one-line docstring.
-# %%
+
 
 def status_of(rating, low_at=2):
     """Return FLAGGED for a low rating (low_at or below), otherwise OK."""
@@ -50,7 +50,7 @@ def status_of(rating, low_at=2):
 #
 #    Excellent: save these lines to a file and load them with open() /
 #    a for loop over the file, instead of writing them directly here.
-# %%
+
 raw_records = []   
 
 with open("messy_records.txt") as f:
@@ -66,13 +66,13 @@ print(raw_records)
 # 3. Parse and report on every record.
 #
 #    Threshold : parse each record, print the cleaned dict.
-# %%
+
 for raw in raw_records:
     record = parse_line(raw)
     print(record)
 
 #    Typical   : also call status_of(...) for each, print it alongside.
-# %%
+
 for raw in raw_records:
     record = parse_line(raw)
     print(record, status_of(record["rating"]))
@@ -80,7 +80,7 @@ for raw in raw_records:
 #    Excellent : print a one-line summary at the end - how many records,
 #                how many flagged.
 
-# %%
+
 flagged_count = 0
 
 for raw in raw_records:
@@ -105,3 +105,5 @@ print(f"{len(raw_records)} records, {flagged_count} flagged")
 # Present
 
 
+
+# %%
