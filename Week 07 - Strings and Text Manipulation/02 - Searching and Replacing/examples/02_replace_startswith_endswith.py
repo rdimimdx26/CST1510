@@ -6,7 +6,7 @@ Run:  python 02_replace_startswith_endswith.py
 """
 
 # --- 1. .replace() - swap every occurrence ------------------------------
-
+# %%
 hostname = "srv_01_east"
 print(hostname.replace("_", "-"))     # srv-01-east - every underscore
 
@@ -58,5 +58,17 @@ for name in ["app.log", "app.csv"]:
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Replace every "-" with "_" in "srv-01-east".
+# %%
+hostname = "srv-01-east"
+print(hostname.replace("-", "_"))
+
 # 2. Given a list of filenames, print only the ones ending in ".log".
+# %%
+filenames = ["server.log", "report.csv", "update.log", "file.txt", "access.log"]
+
+for name in filenames:
+    if name.endswith(".log"):
+        print(name)
 # 3. Count how many times "failed" appears in a log string of your choosing.
+
+# %%
