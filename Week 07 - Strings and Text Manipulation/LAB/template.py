@@ -35,7 +35,7 @@ print(parse_line("SURVEY_2026, RATING, Age=23"))
 #    Typical and above: also write status_of(...), shaped for your lane
 #    (e.g. OVER LIMIT / WARNING / OK, or FLAGGED / OK). Give both a
 #    one-line docstring.
-
+# %%
 def parse_line(raw_line):
     """Clean and parse one raw, messy line into a dict."""
     result = {}
@@ -48,9 +48,11 @@ def parse_line(raw_line):
 
     return result
 
-
-
-# your function(s) go here
+def status_of(rating, low_at=2):
+    """Return FLAGGED for a low rating (low_at or below), otherwise OK."""
+    if rating <= low_at:
+        return "FLAGGED"
+    return "OK"
 
 
 # ====================================================================== INPUT
