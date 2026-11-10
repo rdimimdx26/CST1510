@@ -21,32 +21,19 @@ def parse_line(raw_line):
     """Clean and parse one raw, messy line into a dict."""
     result = {}
     for piece in raw_line.split(","):
-        if "=" not in piece: 
-            result["Survey_2026"] = piece.strip().lower()
-        else:     
-            key, value = piece.split("=")
-            result[key.strip().lower()] = value.strip()
-
-    return result
-
-print(parse_line("  Survey_2026 , rating=4 , age=23 "))
-print(parse_line("SURVEY_2026, RATING, Age=23"))
-
-#    Typical and above: also write status_of(...), shaped for your lane
-#    (e.g. OVER LIMIT / WARNING / OK, or FLAGGED / OK). Give both a
-#    one-line docstring.
-# %%
-def parse_line(raw_line):
-    """Clean and parse one raw, messy line into a dict."""
-    result = {}
-    for piece in raw_line.split(","):
         if "=" not in piece:
-            result["servey"] = piece.strip().lower()
+            result["label"] = piece.strip().lower()
         else:
             key, value = piece.split("=")
             result[key.strip().lower()] = float(value.strip())
 
     return result
+
+
+#    Typical and above: also write status_of(...), shaped for your lane
+#    (e.g. OVER LIMIT / WARNING / OK, or FLAGGED / OK). Give both a
+#    one-line docstring.
+# %%
 
 def status_of(rating, low_at=2):
     """Return FLAGGED for a low rating (low_at or below), otherwise OK."""
@@ -60,24 +47,6 @@ def status_of(rating, low_at=2):
 #    and case. Match the shape to your lane:
 #
 #    AI / Data Science : "  Survey_2026 , rating=4 , age=23  "
-
-# %%
-with open("messy_records.txt") as f:
-    for record in f:
-        raw_records = record.strip()
-        if raw_records == "" or record.startswith("#"):
-            continue                      
-
-        parts = raw_records.split(",")           
-
-        name = parts[0].strip().upper()                 
-        rating = int(parts[1].split("=")[1].strip())     
-        age = int(parts[2].split("=")[1].strip()) 
-
-
-        print(f"records{name}: {rating}/{age}")
-
-
 #
 #    Excellent: save these lines to a file and load them with open() /
 #    a for loop over the file, instead of writing them directly here.
