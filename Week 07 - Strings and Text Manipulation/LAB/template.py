@@ -41,7 +41,7 @@ def parse_line(raw_line):
     result = {}
     for piece in raw_line.split(","):
         if "=" not in piece:
-            result["label"] = piece.strip().lower()
+            result["servey"] = piece.strip().lower()
         else:
             key, value = piece.split("=")
             result[key.strip().lower()] = float(value.strip())
@@ -74,7 +74,7 @@ with open("messy_records.txt") as f:
         age = int(parts[2].split("=")[1].strip()) 
 
 
-        print(f"records{name}: {rating}/{age}")
+print(f"records{name}: {rating}/{age}")
 
 
 #

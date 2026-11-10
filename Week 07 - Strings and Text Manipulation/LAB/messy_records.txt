@@ -1,0 +1,4 @@
+Survey_2026 , rating=4 , age=23
+   SURVEY_2026,RATING=1,Age=35
+    survey_2026 ,rating = 2, age= 41
+   Survey_2026, rating=5 ,age=19
