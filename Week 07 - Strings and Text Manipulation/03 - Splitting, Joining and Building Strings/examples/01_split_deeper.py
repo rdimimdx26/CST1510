@@ -6,7 +6,7 @@ Run:  python 01_split_deeper.py
 """
 
 # --- 1. Recap: split on a separator -------------------------------------
-
+# %%
 line = "srv-01,87,100"
 print(line.split(","))     # ['srv-01', '87', '100']
 
@@ -42,5 +42,16 @@ print(key, value)
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Split "a   b    c" (uneven spacing) with no argument and see what you get.
+# %%
+print("a   b    c".split()) 
+
 # 2. Split "hostname:srv-01:east" so that only the first ":" is used.
+# %%
+print("hostname:srv-01:east".split(":", 1))
+
 # 3. Fix the commented-out ValueError example above using maxsplit.
+# %% 
+piece2 = "note=server=east"
+key, value = piece2.split("=", 1)
+print(key, value)
+# %%
