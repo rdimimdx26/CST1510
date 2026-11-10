@@ -6,7 +6,7 @@ Run:  python 02_join_and_fstrings.py
 """
 
 # --- 1. .join() - a list of strings, glued with a separator -----------
-
+# %%
 parts = ["srv-01", "87", "100"]
 print(",".join(parts))     # srv-01,87,100
 
@@ -58,6 +58,18 @@ print(f"{key} is {value}")
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Join ["R-001", "R-002", "R-003"] into one line separated by " | ".
+# %%
+record = ["R-001", "R-002", "R-003"]
+print(" | ".join(record))
+
 # 2. Given percentages = [87.0, 120.0, 45.0], build one comma-separated
 #    string of them formatted to 1 decimal place each.
+# %%
+percentages = [87.0, 120.0, 45.0]
+
+result = ",".join(f"{p:.1f}" for p in percentages)
+print(result)
 # 3. Explain why ",".join(numbers) fails when numbers is a list of ints.
+# .join() can only combine strings, and the list holds ints. It doesn't convert them itself, so it raises
+# "TypeError. It needs to be converted each one first - ",".join(str(n) for n in numbers).
+# %%
