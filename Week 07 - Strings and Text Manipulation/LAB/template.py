@@ -22,21 +22,31 @@ def parse_line(raw_line):
     result = {}
     for piece in raw_line.split(","):
         if "=" not in piece: 
-            result["hostname"] = piece.strip().lower()
+            result["Survey_2026"] = piece.strip().lower()
         else:     
             key, value = piece.split("=")
             result[key.strip().lower()] = value.strip()
 
     return result
 
-print(parse_line("  Srv-01 , used=87 , total=100  "))
-print(parse_line("SRV-02,USED=120,Total=100"))
+print(parse_line("  Survey_2026 , rating=4 , age=23 "))
+print(parse_line("SURVEY_2026, RATING, Age=23"))
 
 #    Typical and above: also write status_of(...), shaped for your lane
 #    (e.g. OVER LIMIT / WARNING / OK, or FLAGGED / OK). Give both a
 #    one-line docstring.
 
+def parse_line(raw_line):
+    """Clean and parse one raw, messy line into a dict."""
+    result = {}
+    for piece in raw_line.split(","):
+        if "=" not in piece:
+            result["label"] = piece.strip().lower()
+        else:
+            key, value = piece.split("=")
+            result[key.strip().lower()] = float(value.strip())
 
+    return result
 
 
 
