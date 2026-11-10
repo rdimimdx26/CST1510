@@ -58,7 +58,28 @@ for n in range(1, 13):
     
 # 2. Which tool would you use to keep retrying a password until it is
 #    correct? Write it.
+#  A while loop, because the number of attempts isn't known in advance -
+# it repeats until the password is correct, not a fixed number of times.
+# %%
+password = ""
+
+while password != "python123":
+    password = input("Password: ")
+
+print("Access granted")
 # 3. Rewrite section 1 as a while loop that also works for any number of
 #    records, not just exactly 3.
-
+# for i in range(3): (fixed at 3) became while True:, which repeats until told to stop
 # %%
+while True:
+    label = input("Record ID (or 'quit'): ")
+    if label == "quit":
+        break
+    value = float(input("Value: "))
+    limit = float(input("Limit: "))
+
+    if value > limit:
+        print(f"{label}: OVER LIMIT")
+    else:
+        print(f"{label}: OK")
+
