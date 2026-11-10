@@ -8,6 +8,7 @@ Run:  python 02_sentinel_and_running_total.py
 # --- 1. A sentinel is a value that means "stop" -----------------------------
 # "quit" here is not data - it is a signal. Check for it before you use
 # the value as a real one.
+# %%
 
 while True:
     label = input("Record ID (or 'quit'): ")
@@ -82,5 +83,44 @@ print("server is healthy")
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Adapt section 2 so it also counts how many numbers were entered.
+# %%
+otal = 0
+count = 0
+
+while True:
+    entry = input("Enter a number (or 'done'): ")
+    if entry == "done":
+        break
+    total += float(entry)
+    count += 1
+
+print(f"Total: {total}")
+print(f"Numbers entered: {count}")
+
 # 2. Adapt section 3 so it stops on "quit" instead of after exactly 3 checks.
+# %%
+over_limit_count = 0
+checked = 0
+
+while True:
+    entry = input("Value (or 'quit'): ")
+    if entry == "quit":
+        break
+    value = float(entry)
+    limit = float(input("Limit: "))
+    if value > limit:
+        over_limit_count += 1
+    checked += 1
+
+print(f"{over_limit_count} of {checked} were over limit")
+
 # 3. In section 4, change the condition so it skips every EVEN number instead.
+# %%
+n = 0
+while n < 5:
+    n += 1
+    if n % 2 == 0:
+        continue     # skip even numbers, but keep looping
+    print(n)
+
+# %%
