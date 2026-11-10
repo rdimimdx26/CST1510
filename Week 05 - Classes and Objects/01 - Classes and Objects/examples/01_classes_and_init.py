@@ -78,9 +78,41 @@ print(s.hostname, s.used, "/", s.total)
 # --- TRY IT ------------------------------------------------------------------
 # 1. Define a class Server with __init__(self, hostname, used, total). Create
 #    one instance and print its hostname.
+# %%
+class Server:
+    def __init__(self, hostname, used, total):
+        self.hostname = hostname
+        self.used = used
+        self.total = total
+
+
+srv = Server("srv-01", 87.0, 100.0)
+print(srv.hostname)
+
 # 2. Create two Server instances with different data. Change one's `used`
 #    value and prove the other is unaffected.
+# %%
+srv_a = Server("srv-01", 87.0, 100.0)
+srv_b = Server("srv-02", 45.0, 100.0)
+
+print("Before:", srv_a.used, srv_b.used)
+
+srv_a.used = 95.0
+
+print("After: ", srv_a.used, srv_b.used)
 # 3. Predict, then check: what does print(r1) show, without a label or value -
 #    just Record("R-001", 87.0, 100.0) printed directly?
 
+
 # %%
+class Record:
+    def __init__(self, label, value, limit):
+        self.label = label
+        self.value = value
+        self.limit = limit
+
+
+r1 = Record("R-001", 87.0, 100.0)
+print(r1)
+# There’s no class Record: in this file, so Python doesn’t know what it is.<__main__.Record object at 0x0000022684B84C20>
+
