@@ -5,7 +5,7 @@ Repeat while a condition is True.   Run:  python 01_while_basics.py
 """
 
 # --- 1. The basic shape ------------------------------------------------
-
+# %%
 count = 1
 
 while count <= 3:
@@ -55,6 +55,23 @@ while True:
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Print the numbers 5 down to 1 using a while loop.
+# %%
+number = 5
+
+while number >= 1:
+    print(number)
+    number -= 1
 # 2. Before running it, say out loud what makes section 2's loop stop.
+# The while keyword, together with the indented block under it makes it a loop.
+
 # 3. Write a while loop that keeps asking for a password until it equals
 #    "python123".
+# %%
+password = ""
+
+while password != "python123":
+    password = input("Enter password: ")
+
+print("Access granted")
+
+# %%
