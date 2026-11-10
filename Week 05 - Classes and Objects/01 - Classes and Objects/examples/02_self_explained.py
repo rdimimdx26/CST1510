@@ -65,6 +65,25 @@ print(r_b.summary())     # R-002: 120.0 - self was r_b here, same method
 # --- TRY IT ------------------------------------------------------------------
 # 1. Explain in one sentence why self has to be the first parameter of every
 #    method, even though you never type it when calling.
+# Because Python automatically passes the object the method was called on as the first argument, so the method knows
+# whose data (self.value, self.limit) to use - you don't type it because Python
+# fills it in from the object before the dot.
+
 # 2. Predict, then check: what happens if you name the first parameter
 #    "this" instead of "self"? (It still works - self is a convention, not
 #    a keyword. Do not actually do this in real code.)
+# Python just passes the object in as the first parameter, whatever that parameter is called.
+# %%
+class Record:
+    def __init__(this, label, value, limit):
+        this.label = label
+        this.value = value
+        this.limit = limit
+
+    def percent(this):
+        return (this.value / this.limit) * 100
+
+
+r = Record("R-001", 87.0, 100.0)
+print(r.label, r.percent())
+# %%
