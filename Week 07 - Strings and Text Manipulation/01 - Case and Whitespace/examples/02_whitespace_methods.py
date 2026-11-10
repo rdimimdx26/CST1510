@@ -6,7 +6,7 @@ Run:  python 02_whitespace_methods.py
 """
 
 # --- 1. Real text arrives with stray whitespace ------------------------
-
+# %%
 raw = "  srv-01  "
 print(f"[{raw}]")            # [  srv-01  ] - spaces you cannot see in print()
 
@@ -60,5 +60,15 @@ print(raw_hostname.strip().lower() in known_hostnames)  # IT
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Given "   R-004   ", print it with the whitespace removed.
+# %%
+print("   R-004   ".strip())
+
 # 2. Given "///R-004///", strip just the "/" characters.
+# %%
+print("///R-004///".strip("/"))
+
 # 3. Chain .strip() and .upper() in one line on a value of your choosing.
+# %%
+print("   srv-01  ".strip().upper())
+
+# %%
