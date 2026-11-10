@@ -7,7 +7,7 @@ Run:  python 02_line_by_line_and_split.py
 """
 
 # --- 1. Looping over a file gives you one line at a time --------------------
-
+# %%
 with open("sample_records.txt") as f:
     for line in f:
         print(line)
@@ -53,5 +53,29 @@ with open("sample_records.txt") as f:
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Read sample_records.txt and print just the label from each line.
+
+# %%
+with open("sample_records.txt") as f:
+    for line in f:
+        line = line.strip()
+        if line == "":
+            continue
+        label = line.split(",")[0]
+        print(label)
+        
 # 2. Read it again, and print the value converted to float, for each line.
+# %%
+with open("sample_records.txt") as f:
+    for line in f:
+        line = line.strip()
+        if line == "":
+            continue
+        value = float(line.split(",")[1])
+        print(value)
 # 3. Predict, then check: what does "a,b,c".split(",") give you?
+# a list of three strings ['a', 'b', 'c']
+# %%
+print("a,b,c".split(","))
+
+
+# %%
