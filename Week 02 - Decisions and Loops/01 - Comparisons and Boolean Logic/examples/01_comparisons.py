@@ -44,5 +44,20 @@ print(20 == 20.0)     # True  - int vs float, numbers still compare fairly
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Set attempts = 4 and max_attempts = 3. Print whether attempts is over the max.
+# %%
+attempts = 4
+max_attempts = 3
+
+print(attempts > max_attempts)
+
 # 2. Predict, then check: 90 >= 90   and   90 > 90
+# 90 >= 90 gives True, because >= means “greater than or equal to”, and 90 is equal to 90
+# 90 > 90 gives False, because > means “strictly greater than”, and 90 isn’t greater than itself
+
 # 3. Explain out loud why "3" == 3 is False.
+#"3" == 3 is False because the two values are different types. 
+# "3" (in quotes) is a string, the text character “3”. 
+# 3 (no quotes) is an integer, the number three. 
+# Python doesn’t automatically convert one type into the other when comparing with ==, so a piece of text is never equal to a number, 
+# even if they look the same when printed.
+# %%
