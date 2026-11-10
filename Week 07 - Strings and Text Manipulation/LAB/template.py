@@ -128,6 +128,7 @@ print(f"{len(raw_records)} records, {flagged_count} flagged")
 # 4. Before you finish:
 #
 #    [ ] Run it against at least 5 genuinely messy raw records
+# Done
 #    [ ] Run it with a value that will not convert to a number - write the
 #        error down
 # ValueError: invalid literal for int() with base 10: 'four
