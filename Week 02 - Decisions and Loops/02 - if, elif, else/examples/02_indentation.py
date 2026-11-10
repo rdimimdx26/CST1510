@@ -71,7 +71,7 @@ else:
 # %%
 if rating >= 4:
     print("HIGH")
- elif rating == 3:      # underlined in red. IndentationError: unindent does not match any outer indentation level
+elif rating == 3:      # indented # 1 space in front first underlined in red. When run: IndentationError: unindent does not match any outer indentation level
     print("AVERAGE")
 
 # %%
