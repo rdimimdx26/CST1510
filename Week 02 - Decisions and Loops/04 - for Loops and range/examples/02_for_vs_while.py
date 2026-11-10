@@ -51,7 +51,14 @@ for i in range(10):
 
 # --- TRY IT ------------------------------------------------------------------
 # 1. Which tool would you use to print the 12 times table? Write it.
+# # A for loop with range(), because the number of repeats is known in advance (12).
+# %%
+for n in range(1, 13):
+    print(n, "x 12 =", n * 12)
+    
 # 2. Which tool would you use to keep retrying a password until it is
 #    correct? Write it.
 # 3. Rewrite section 1 as a while loop that also works for any number of
 #    records, not just exactly 3.
+
+# %%
