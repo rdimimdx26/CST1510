@@ -2,9 +2,9 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
+Name  : Rumyana Dimitrova
 Lane  :  AI 
-Date  :
+Date  : 10.11.2026
 
 Run it:   python template.py
 
@@ -21,11 +21,16 @@ def parse_line(raw_line):
     """Clean and parse one raw, messy line into a dict."""
     result = {}
     for piece in raw_line.split(","):
-        key, value = piece.split("=")
-        result[key.strip().lower()] = value.strip()
+        if "=" not in piece: 
+            result["hostname"] = piece.strip().lower()
+        else:     
+            key, value = piece.split("=")
+            result[key.strip().lower()] = value.strip()
 
     return result
 
+print(parse_line("  Srv-01 , used=87 , total=100  "))
+print(parse_line("SRV-02,USED=120,Total=100"))
 
 #    Typical and above: also write status_of(...), shaped for your lane
 #    (e.g. OVER LIMIT / WARNING / OK, or FLAGGED / OK). Give both a
@@ -59,8 +64,7 @@ with open("messy_records.txt") as f:
 
         print(f"records{name}: {rating}/{age}")
 
-#    Cyber Security     : "SRC=10.0.0.5,ATTEMPTS=12,RESULT=FAILED"
-#    IT                  : "  Srv-01 , used=87 , total=100  "
+
 #
 #    Excellent: save these lines to a file and load them with open() /
 #    a for loop over the file, instead of writing them directly here.
@@ -72,6 +76,7 @@ raw_records = []   # replace with your code
 # 3. Parse and report on every record.
 #
 #    Threshold : parse each record, print the cleaned dict.
+
 #    Typical   : also call status_of(...) for each, print it alongside.
 #    Excellent : print a one-line summary at the end - how many records,
 #                how many flagged.
