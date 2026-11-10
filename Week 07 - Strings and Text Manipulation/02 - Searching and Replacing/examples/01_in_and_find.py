@@ -51,7 +51,6 @@ log = "2026-09-08 WARNING disk 90% full"
 print(log.find("disk"))
 
 # 3. Predict, then check: what does "".find("x") give you?
-# empty string contains no characters, so "x"
 # It gives: -1.is not found. .find() returns -1 for "not found" instead of raising an error
 # %%
 print("".find("x"))
