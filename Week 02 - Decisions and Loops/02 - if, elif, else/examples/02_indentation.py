@@ -28,14 +28,14 @@ if value > limit:
 
 # --- 3. What goes wrong -----------------------------------------------------
 # Uncomment each block below one at a time and run the file to see the error.
-
-# if value > limit:
-# print("OVER")
+# %%
+#if value > limit:
+#print("OVER")
 # IndentationError: expected an indented block after 'if' statement
-
-# if value > limit:
-#     print("OVER")
-#      print("still over")
+# %%
+#if value > limit:
+#    print("OVER")
+#     print("still over")
 # IndentationError: unexpected indent
 
 
@@ -54,5 +54,24 @@ else:
 # --- TRY IT ------------------------------------------------------------------
 # 1. Uncomment the two broken blocks in section 3, run the file, read the
 #    error, then comment them out again.
+# IndentationError: expected an indented block after 'if' statement on line 2
+# IndentationError: unexpected indent
+
 # 2. Write an if / elif / else where every keyword lines up in the same column.
+# %%
+rating = 3
+
+if rating >= 4:
+    print("HIGH")
+elif rating == 3:
+    print("AVERAGE")
+else:
+    print("LOW")
 # 3. Deliberately indent one line by one extra space and see what happens.
+# %%
+if rating >= 4:
+    print("HIGH")
+ elif rating == 3:      # underlined in red. IndentationError: unindent does not match any outer indentation level
+    print("AVERAGE")
+
+# %%
